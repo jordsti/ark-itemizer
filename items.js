@@ -10,7 +10,8 @@ var itemStats = [
 	{"id": 9, "name": "Spoils"},
 	{"id": 10, "name": "Torpor"},
 	{"id": 11, "name": "Water"},
-	{"id": 12, "name": "Stamina"}
+	{"id": 12, "name": "Stamina"},
+	{"id": 13, "name": "Cooldown"}
 ];
 
 var items = [
@@ -98,8 +99,8 @@ var items = [
 		"recipe": [],
 		"stats": [
 			{"id": 1, "value": "Consumable"},
-			{"id": 7, "value": -5},
-			{"id": 8, "value": 10},
+			{"id": 7, "value": "-5"},
+			{"id": 8, "value": "+10"},
 			{"id": 9, "value": "10:00"}
 		]
 		},
@@ -114,8 +115,8 @@ var items = [
 		"recipe": [],
 		"stats": [
 			{"id": 1, "value": "Consumable"},
-			{"id": 7, "value": -12},
-			{"id": 8, "value": 3.5},
+			{"id": 7, "value": "-12"},
+			{"id": 8, "value": "+3.5"},
 		]
 		},
 	{
@@ -140,7 +141,7 @@ var items = [
 	{
 		"name": "Cloth Pants",
 		"maxStack": 1,
-		"decomposes": -1,
+		"decomposes": 120,
 		"itemId": 17,
 		"description": "Provides some protection from the heat and cold, but only minimal protection from injuries. Required skill to learn Hide Pants",
 		"image": "cloth_pants.png",
@@ -158,7 +159,7 @@ var items = [
 	{
 		"name": "Cloth Shirt",
 		"maxStack": 1,
-		"decomposes": -1,
+		"decomposes": 120,
 		"itemId": 18,
 		"description": "Provides some protection from the heat and cold, but only minimal protection from injuries. Required skill to learn Hide Shirt and other advanced armor.",
 		"image": "cloth_shirt.png",
@@ -176,7 +177,7 @@ var items = [
 	{
 		"name": "Cloth Hat",
 		"maxStack": 1,
-		"decomposes": -1,
+		"decomposes": 120,
 		"itemId": 19,
 		"description": "Provides some protection from the heat and cold, but only minimal protection from injuries. Required skill for Hide Hat and other advanced armor.",
 		"image": "cloth_hat.png",
@@ -194,7 +195,7 @@ var items = [
 	{
 		"name": "Cloth Boots",
 		"maxStack": 1,
-		"decomposes": -1,
+		"decomposes": 120,
 		"itemId": 20,
 		"description": "Hide-soles shoes provide some protection from the heat and cold, but only minimal protection from injuries.",
 		"image": "cloth_boots.png",
@@ -213,14 +214,12 @@ var items = [
 	{
 		"name": "Cloth Gloves",
 		"maxStack": 1,
-		"decomposes": -1,
+		"decomposes": 120,
 		"itemId": 21,
 		"description": "Hide-padded gloves provide some protection from the heat and cold, but only minimal protection from injuries.",
 		"image": "cloth_gloves.png",
 		"weight": 0.5,
 		"recipe": [
-			//{itemId, count},
-			//{itemId, ItemId2, count}
 			{"itemId":76, "count":20},
 			{"itemId":10, "count":4}
 		],
@@ -229,6 +228,101 @@ var items = [
 			{"id": 2, "value": 10},
 			{"id": 3, "value": 5.0},
 			{"id": 4, "value": 10.0}
+		]
+		},
+	{
+		"name": "Hide Pants",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 22,
+		"description": "Keeps you warm while providing some physical protection. Requires Cloth Pants Engram as well.",
+		"image": "hide_pants.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId":10, "count":25},
+			{"itemId":76, "count":10}
+		],
+		"stats": [
+			{"id": 1, "value": "Legs"},
+			{"id": 2, "value": 20},
+			{"id": 3, "value": 20},
+			{"id": 4, "value": -15.0}
+		]
+		},
+	{
+		"name": "Hide Shirt",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 23,
+		"description": "Keeps you warm while providing some protection. Requires Cloth Shirt engram as well.",
+		"image": "hide_shirt.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId":10, "count":20},
+			{"itemId":76, "count":8}
+		],
+		"stats": [
+			{"id": 1, "value": "Chest"},
+			{"id": 2, "value": 20},
+			{"id": 3, "value": 20},
+			{"id": 4, "value": -15.0}
+		]
+		},
+	{
+		"name": "Hide Hat",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 24,
+		"description": "Keeps you warm while providing some physical protection.",
+		"image": "hide_hat.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId":10, "count":15},
+			{"itemId":76, "count":6}
+		],
+		"stats": [
+			{"id": 1, "value": "Head"},
+			{"id": 2, "value": 20},
+			{"id": 3, "value": 15},
+			{"id": 4, "value": -10.0}
+		]
+		},
+	{
+		"name": "Hide Boots",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 25,
+		"description": "Keeps you warm while provides some physical protection.",
+		"image": "hide_boots.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId":10, "count":12},
+			{"itemId":76, "count":5}
+		],
+		"stats": [
+			{"id": 1, "value": "Feet"},
+			{"id": 2, "value": 20},
+			{"id": 3, "value": 15},
+			{"id": 4, "value": -10.0}
+		]
+		},
+	{
+		"name": "Hide Gloves",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 26,
+		"description": "Keeps you warm while providing some physical protection.",
+		"image": "hide_gloves.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId":10, "count":10},
+			{"itemId":76, "count":4}
+		],
+		"stats": [
+			{"id": 1, "value": "Feet"},
+			{"id": 2, "value": 20},
+			{"id": 3, "value": 15},
+			{"id": 4, "value": -10.0}
 		]
 		},
 	{
@@ -306,6 +400,23 @@ var items = [
 		]
 		},
 	{
+		"name": "Paintbrush",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 38,
+		"description": "Apply a dye to this, then swing it at structures to paint them.",
+		"image": "paintbrush.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId":7, "count":1},
+			{"itemId":10, "count":3},
+			{"itemId":75, "count":10}
+		],
+		"stats": [
+			{"id": 1, "value": "Tool"},
+		]
+		},
+	{
 		"name": "Campfire",
 		"maxStack": 1,
 		"decomposes": -1,
@@ -325,19 +436,69 @@ var items = [
 		]
 		},
 	{
-		"name": "Hode Sleeping Bag",
+		"name": "Standing Torch",
+		"maxStack": 100,
+		"decomposes": -1,
+		"itemId": 40,
+		"description": "A torch on a small piece of wood that lights and warms the immediate area.",
+		"image": "standing_torch.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":75, "count":8},
+			{"itemId":73, "count":1},
+			{"itemId":8, "count":1},
+			{"itemId":7, "count":3}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 500},
+		]
+		},
+	{
+		"name": "Hide Sleeping Bag",
 		"maxStack": 1,
 		"decomposes": -1,
 		"itemId": 41,
 		"description": "This hide sleeping bag acts as a single-use respawn point, only usable by you.",
 		"image": "hide_sleeping_bag.png",
-		"weight": .0,
+		"weight": 10.0,
 		"recipe": [
 			{"itemId": 10, "count": 25},
 			{"itemId":76, "count": 15}
 		],
 		"stats": [
 			{"id": 1, "value": "Structure"},
+		]
+		},
+	{
+		"name": "Blood Extraction Syringe",
+		"maxStack": 1,
+		"decomposes": -1,
+		"itemId": 44,
+		"description": "Use this on a human to extract their blood for transfusion.",
+		"image": "blood_extraction_syringe.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId":10, "count": 10},
+			{"itemId":11, "itemId2": 217,"count": 1}
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+		]
+		},
+	{
+		"name": "Blood Pack",
+		"maxStack": 100,
+		"decomposes": -1,
+		"itemId": 45,
+		"description": "Use this to replace lost blood. Restores Health over time.",
+		"image": "blood_pack.png",
+		"weight": 0.3,
+		"recipe": [],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 7, "value": "15 over 2 seconds"},
+			{"id": 13, "value": "40 seconds"}
 		]
 		},
 	{
@@ -402,6 +563,19 @@ var items = [
 		"image": "flint.png",
 		"weight": 0.05,
 		"recipe": [],
+		"stats": []
+		},
+	{
+		"name": "Metal Ingot",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 74,
+		"description": "Created by refining metal ore in a forge.",
+		"image": "metal_ingot.png",
+		"weight": 1.00,
+		"recipe": [
+			{"itemId": 9, "count": 2}
+		],
 		"stats": []
 		},
 	{
@@ -904,9 +1078,47 @@ var items = [
 		]
 		},
 	{
+		"name": "Refining Forge",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 125,
+		"description": "Requires wood, thatch, or sparkpowder to activate. Put unrefined resources in this to refine them.",
+		"image": "refining_forge.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 8, "count": 125},
+			{"itemId": 73, "count": 5},
+			{"itemId": 10, "count": 65},
+			{"itemId": 7, "count": 20},
+			{"itemId": 76, "count": 40}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 2500}
+		]
+		},
+	{
+		"name": "Smithy",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 126,
+		"description": "Place materials along with blueprints in this to create certain advanced forged items.",
+		"image": "smithy.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 74, "count": 5},
+			{"itemId": 7, "count": 30},
+			{"itemId": 10, "count": 20}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 2500}
+		]
+		},
+	{
 		"name": "Cementing Paste",
 		"maxStack": 100,
-		"decomposes": -1,
+		"decomposes": 120,
 		"itemId": 146,
 		"description": "Paste created at Mortar and Pestle.",
 		"image": "cementing_paste.png",
@@ -916,6 +1128,39 @@ var items = [
 			{"itemId":11, "itemId2":217, "count":4}
 		],
 		"stats": []
+		},
+	{
+		"name": "Oil",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 162,
+		"description": "A thick blob of unrefined oil. Can be refined with hide to make gasoline.",
+		"image": "oil.png",
+		"weight": 1.0,
+		"recipe": [],
+		"stats": [
+			{"id": 1, "value": "Resource"}
+		]
+		},
+	{
+		"name": "Fabricator",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 185,
+		"description": "Place materials along with blueprints in this to create certain high-end machined items.",
+		"image": "fabricator.png",
+		"weight": 500.0,
+		"recipe": [
+			{"itemId": 74, "count": 35},
+			{"itemId": 146,"count": 20},
+			{"itemId": 108,"count": 50},
+			{"itemId": 78,"count": 15},
+			{"itemId": 162,"count": 10}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 2500}
+		]
 		},
 	{
 		"name": "Keratin",
