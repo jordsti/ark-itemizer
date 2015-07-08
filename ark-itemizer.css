@@ -1,0 +1,8 @@
+.ark-js-link:hover {
+	cursor: pointer;
+}
+
+.ark-js-link {
+	font-weight: bold;
+	color: blue;
+}

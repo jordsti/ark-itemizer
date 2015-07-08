@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>ARK Itemizer Test</title>
+		<link href="ark-itemizer.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="test_zone">
+			<input type="text" name="test_item_id" id="test_item_id" placeholder="Item ID" /><br />
+			<p><a class="ark-js-link" onclick="arkTestItem('test_zone');">Test</a></p>
+		</div>
+		<a class="ark-js-link" onclick="arkShowItemList('item_list');">Show Items list</a>
+		<div id="item_list">
+			
+		</div>
+		<a class="ark-js-link" onclick="arkShowItemStats('stat_list');">Show Item stats</a>
+		<div id="stat_list">
+		
+		</div>
+		<script src="jquery-2.1.4.js"></script>
+		<script src="items.js"></script>
+		<script src="ark-itemizer.js"></script>
+	</body>
+</html>
