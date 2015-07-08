@@ -326,6 +326,106 @@ var items = [
 		]
 		},
 	{
+		"name": "Chitin Leggings",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 27,
+		"description": "Provides moderate physical protection, but can get a little warm.",
+		"image": "chitin_leggings.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId":11, "count":25},
+			{"itemId":10, "count":12},
+			{"itemId":76, "count":5}
+		],
+		"stats": [
+			{"id": 1, "value": "Legs"},
+			{"id": 2, "value": 50},
+			{"id": 3, "value": 10},
+			{"id": 4, "value": -5.0}
+		]
+		},
+	{
+		"name": "Chitin Chestpiece",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 28,
+		"description": "Provides moderate physical protection, but can get a little warm.",
+		"image": "chitin_chestpiece.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId":11, "count":20},
+			{"itemId":10, "count":10},
+			{"itemId":76, "count":4}
+		],
+		"stats": [
+			{"id": 1, "value": "Chest"},
+			{"id": 2, "value": 50},
+			{"id": 3, "value": 10},
+			{"id": 4, "value": -5.0}
+		]
+		},
+	{
+		"name": "Chitin Helmet",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 29,
+		"description": "Provides moderate physical protection, but can get a little warm.",
+		"image": "chitin_helmet.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId":11, "count":15},
+			{"itemId":10, "count":7},
+			{"itemId":76, "count":3}
+		],
+		"stats": [
+			{"id": 1, "value": "Head"},
+			{"id": 2, "value": 50},
+			{"id": 3, "value": 10},
+			{"id": 4, "value": -5.0}
+		]
+		},
+	{
+		"name": "Chitin Boots",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 30,
+		"description": "Provides moderate physical protection, but can get a little warm.",
+		"image": "chitin_boots.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId":11, "count":12},
+			{"itemId":10, "count":6},
+			{"itemId":76, "count":4}
+		],
+		"stats": [
+			{"id": 1, "value": "Feet"},
+			{"id": 2, "value": 50},
+			{"id": 3, "value": 10},
+			{"id": 4, "value": -5.0}
+		]
+		},
+	{
+		"name": "Chitin Gauntlets",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 31,
+		"description": "Provides moderate physical protection, but can get a little warm.",
+		"image": "chitin_gauntlets.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId":11, "count":10},
+			{"itemId":10, "count":5},
+			{"itemId":76, "count":2}
+		],
+		"stats": [
+			{"id": 1, "value": "Hands"},
+			{"id": 2, "value": 50},
+			{"id": 3, "value": 10},
+			{"id": 4, "value": -5.0}
+		]
+		},
+	{
 		"name": "Stone Arrow",
 		"maxStack": 50,
 		"decomposes": -1,
@@ -966,6 +1066,42 @@ var items = [
 		]
 		},
 	{
+		"name": "Storage Box",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 105,
+		"description": "A small box to store goods in.",
+		"image": "storage_box.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 7, "count": 25},
+			{"itemId": 75, "count": 20},
+			{"itemId": 76, "count": 10}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 1000}
+		]
+		},
+	{
+		"name": "Large Storage Box",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 106,
+		"description": "A large box to store goods in.",
+		"image": "large_storage_box.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 7, "count": 50},
+			{"itemId": 75, "count": 35},
+			{"itemId": 76, "count": 25}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 1000}
+		]
+		},
+	{
 		"name": "Mortar And Pestle",
 		"maxStack": 1,
 		"decomposes": -1,
@@ -1008,6 +1144,70 @@ var items = [
 			{"itemId": 77, "count": 1}
 		],
 		"stats": []
+		},
+	{
+		"name": "Amarberry",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 117,
+		"description": "This yellow berry grows mostly on the beaches. Tasty, and can be used to make yellow dye.",
+		"image": "amarberry.png",
+		"weight": 0.1,
+		"recipe": [],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 8, "value": "+1.5"},
+			{"id": 11, "value": "+1"},
+			{"id": 9, "value": "10:00"}
+		]
+		},
+	{
+		"name": "Azulberry",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 118,
+		"description": "This blue berry grows mostly in dense jungles. Tasty, and can be used to make blue dye.",
+		"image": "azulberry.png",
+		"weight": 0.1,
+		"recipe": [],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 8, "value": "+1.5"},
+			{"id": 11, "value": "+1"},
+			{"id": 9, "value": "10:00"}
+		]
+		},
+	{
+		"name": "Tintoberry",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 119,
+		"description": "This blue berry grows mostly in dense jungles. Tasty, and can be used to make blue dye.",
+		"image": "tintoberry.png",
+		"weight": 0.1,
+		"recipe": [],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 8, "value": "+1.5"},
+			{"id": 11, "value": "+1"},
+			{"id": 9, "value": "10:00"}
+		]
+		},
+	{
+		"name": "Mejoberry",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 120,
+		"description": "This wild berry grows mostly on mountains. While not tasty on it's own, its juices improve almost every meal.",
+		"image": "mejoberry.png",
+		"weight": 0.1,
+		"recipe": [],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 8, "value": "+1.5"},
+			{"id": 11, "value": "+1"},
+			{"id": 9, "value": "10:00"}
+		]
 		},
 	{
 		"name": "Narcoberry",
@@ -1116,6 +1316,25 @@ var items = [
 		]
 		},
 	{
+		"name": "Simple Bed",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 129,
+		"description": "Thatch may not make the most comfortable mattress, but this bed acts as a respawn point for you and your tribe.",
+		"image": "simple_bed.png",
+		"weight": 8.0,
+		"recipe": [
+			{"itemId": 7, "count": 15},         
+			{"itemId": 75, "count": 80},
+			{"itemId": 76, "count": 30},
+			{"itemId": 10, "count": 40}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 1000}
+		]
+		},
+	{
 		"name": "Cementing Paste",
 		"maxStack": 100,
 		"decomposes": 120,
@@ -1163,6 +1382,23 @@ var items = [
 		]
 		},
 	{
+		"name": "Parachute",
+		"maxStack": 20,
+		"decomposes": 120,
+		"itemId": 187,
+		"description": "Use this while falling to slow your fall. Jump while parachuting to deactivate it.",
+		"image": "parachute.png",
+		"weight": 3.0,
+		"recipe": [
+			{"itemId": 75, "count": 40},
+			{"itemId": 76,"count": 20},
+			{"itemId": 10,"count": 10},
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"}
+		]
+		},
+	{
 		"name": "Keratin",
 		"maxStack": 100,
 		"decomposes": -1,
@@ -1172,5 +1408,202 @@ var items = [
 		"weight": 0.01,
 		"recipe": [],
 		"stats": []
+		},
+	{
+		"name": "Raw Prime Meat",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 252,
+		"description": "Eating raw food will sate hunger, but is unhealthy for humans. This excellent cut spoils very quickly. Most wild carnivores love this meat.",
+		"image": "raw_prime_meat.png",
+		"weight": 0.1,
+		"recipe": [],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 7, "value": "-5"},
+			{"id": 8, "value": "+20"},
+			{"id": 9, "value": "2:20"}
+		]
+		},
+	{
+		"name": "Cooked Prime Meat",
+		"maxStack": 30,
+		"decomposes": 120,
+		"itemId": 253,
+		"description": "Sates your hunger, and provides health while being digested. More effective than normal meat. Wild Carnivores like this meat a lot.",
+		"image": "cooked_prime_meat.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId": 252, "count": 1}
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 7, "value": "+20"},
+			{"id": 8, "value": "+35"},
+			{"id": 9, "value": "45:00"}
+		]
+		},
+	{
+		"name": "Preserving Bin",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 295,
+		"description": "Burns simple fuel at low temperatures to dehydrate food and kill bacteria. Keeps perishables from spoiling for a small time.",
+		"image": "preserving_bin.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 8, "count": 30},
+			{"itemId": 7, "count": 30},
+			{"itemId": 75, "count": 10},
+			{"itemId": 76, "count": 20}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 600}
+		]
+		},
+	{
+		"name": "Wooden Spike Wall",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 307,
+		"description": "These incredibly sharp wooden stakes are dangerous to any that touch them. Larger creatures take more damage.",
+		"image": "wooden_spike_wall.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 7,"count": 40},
+			{"itemId": 10,"count": 10},
+			{"itemId": 76,"count": 30}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 3500}
+		]
+		},
+	{
+		"name": "Stone Wall",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 311,
+		"description": "A brick-and-mortar wall that insulates the inside from the outside and seperates rooms.",
+		"image": "stone_wall.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 8,"count": 40},
+			{"itemId": 7,"count": 20},
+			{"itemId": 75,"count": 15}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 10000}
+		]
+		},
+	{
+		"name": "Stone Ceiling",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 315,
+		"description": "A stable brick-and-mortar ceiling that insulates the inside from the outside, and doubles as a floor for higher levels.",
+		"image": "stone_ceiling.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 8,"count": 60},
+			{"itemId": 7,"count": 30},
+			{"itemId": 75,"count": 20}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 10000}
+		]
+		},
+	{
+		"name": "Stone Hatchframe",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 316,
+		"description": "This brick-and-mortar ceiling has a hole in it for trapdoor.",
+		"image": "stone_hatchframe.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 8,"count": 50},
+			{"itemId": 7,"count": 25},
+			{"itemId": 75,"count": 15}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 10000}
+		]
+		},
+	{
+		"name": "Stone Foundation",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 318,
+		"description": "A foundation is required to build structures in an area. This one is made from brick-and-mortar.",
+		"image": "stone_foundation.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 8,"count": 80},
+			{"itemId": 7,"count": 40},
+			{"itemId": 75,"count": 30}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 15000}
+		]
+		},
+	{
+		"name": "Stone Pillar",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 321,
+		"description": "Adds structural integrity to the area it is built under.",
+		"image": "stone_pillar.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 8,"count": 30},
+			{"itemId": 7,"count": 15},
+			{"itemId": 75,"count": 10}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 6250}
+		]
+		},
+	{
+		"name": "Stone Doorframe",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 322,
+		"description": "A brick-and-mortar wall that provides entrance to a structure.",
+		"image": "stone_doorframe.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 8,"count": 30},
+			{"itemId": 7,"count": 16},
+			{"itemId": 75,"count": 12}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 10000}
+		]
+		},
+	{
+		"name": "Stone Windowframe",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 323,
+		"description": "A brick-and-mortar wall with a hole for a window.",
+		"image": "stone_windowframe.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 8,"count": 35},
+			{"itemId": 7,"count": 18},
+			{"itemId": 75,"count": 12}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 10000}
+		]
 		},
 ]
