@@ -1,4 +1,25 @@
-var itemStats = [
+//ARK Item Database
+// Data coming from : http://ark.gamepedia.com/
+// and http://www.arkchives.com/
+// all items and in the array "ark_items"
+// each items contains these attributes
+//		name : Item Name
+//		maxStack : Maximum item per stack
+//		decomposes : Time before the item diseappear
+//		itemId : ARK item Id
+//		description : Item Description
+//		image : Image name
+//		weight : Item Weight
+//		recipe : list of ingredients to craft the item
+//			each ingredients must contain
+//				itemId : item of the ingredient
+//				itemId2 : (Optional) second item id of the ingredient (for item that need Chitin/Keratin)
+//				count : count of items needed
+//		stats : list of item stat
+//			id : Stat ID
+//			value : Stat Value
+
+var ark_itemStats = [
 	{"id": 1, "name": "Type"},
 	{"id": 2, "name": "Armor"},
 	{"id": 3, "name": "Hypothermal Insulation"},
@@ -14,7 +35,23 @@ var itemStats = [
 	{"id": 13, "name": "Cooldown"}
 ];
 
-var items = [
+var ark_items = [
+	{
+		"name": "Simple Bullet",
+		"maxStack": 50,
+		"decomposes": 120,
+		"itemId": 4,
+		"description": "Primarily used with forged handguns.",
+		"image": "simple_bullet.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId": 74, "count": 1},
+			{"itemId": 109, "count": 3}
+		],
+		"stats": [
+			{"id": 1, "value": "Ammunition"}
+		]
+		},
 	{
 		"name": "Bow",
 		"maxStack": 1,
@@ -136,6 +173,23 @@ var items = [
 			{"id": 12, "value": "+0.5"},
 			{"id": 8, "value": "+20"},
 			{"id": 9, "value": "20:00"}
+		]
+		},
+	{
+		"name": "Water Jar",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 15,
+		"description": "Safely carries a lot of water, but is also a bit heavy.",
+		"image": "water_jar.png",
+		"weight": 5.0,
+		"recipe": [
+			{"itemId": 146, "count": 15},
+			{"itemId": 10, "count": 5}
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 11, "value": "+150"},
 		]
 		},
 	{
@@ -428,7 +482,7 @@ var items = [
 	{
 		"name": "Stone Arrow",
 		"maxStack": 50,
-		"decomposes": -1,
+		"decomposes": 120,
 		"itemId": 32,
 		"description": "An arrow for the Bow.",
 		"image": "stone_arrow.png",
@@ -445,7 +499,7 @@ var items = [
 	{
 		"name": "Stone Pick",
 		"maxStack": 1,
-		"decomposes": -1,
+		"decomposes": 120,
 		"itemId": 33,
 		"description": "A large stone pick for harvesting primarily flint from rocks, thatch from trees, and raw meat from bodies.",
 		"image": "stone_pick.png",
@@ -464,7 +518,7 @@ var items = [
 	{
 		"name": "Stone Hatchet",
 		"maxStack": 1,
-		"decomposes": -1,
+		"decomposes": 120,
 		"itemId": 34,
 		"description": "A sharp flint hatchet for harvesting wood from trees, stone from rocks, and skin from bodies.",
 		"image": "stone_hatchet.png",
@@ -478,6 +532,44 @@ var items = [
 			{"id": 1, "value": "Weapon"},
 			{"id": 5, "value": 40},
 			{"id": 6, "value": 21.8}
+		]
+		},
+	{
+		"name": "Metal Pick",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 35,
+		"description": "A sharp metal pick for harvesting metal from mountain rocks, flint from rocks, and meat from bodies.",
+		"image": "metal_pick.png",
+		"weight": 2.0,
+		"recipe": [
+			{"itemId":74, "count":1},
+			{"itemId":7, "count":1},
+			{"itemId":10, "count":10}
+		],
+		"stats": [
+			{"id": 1, "value": "Weapon"},
+			{"id": 5, "value": 160},
+			{"id": 6, "value": 34.3}
+		]
+		},
+	{
+		"name": "Metal Hatchet",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 36,
+		"description": "A sharp metal hatchet for harvesting wood from trees, stone from rocks, and skin from bodies.",
+		"image": "metal_hatchet.png",
+		"weight": 2.0,
+		"recipe": [
+			{"itemId":74, "count":8},
+			{"itemId":7, "count":1},
+			{"itemId":10, "count":10}
+		],
+		"stats": [
+			{"id": 1, "value": "Weapon"},
+			{"id": 5, "value": 40},
+			{"id": 6, "value": 41.4}
 		]
 		},
 	{
@@ -1146,6 +1238,97 @@ var items = [
 		"stats": []
 		},
 	{
+		"name": "Stone Irrigation Pipe - Intake",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 110,
+		"description": "The stone intake for an irrigation network that transports water over land.",
+		"image": "stone_irrigation_intake.png",
+		"weight": 5.0,
+		"recipe": [
+			{"itemId": 8, "count": 25}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"}
+		]
+		},
+	{
+		"name": "Stone Irrigation Pipe - Straight",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 111,
+		"description": "A straight stone pipe for an irrigation network, used for transporting water across land.",
+		"image": "stone_irrigation_straight.png",
+		"weight": 5.0,
+		"recipe": [
+			{"itemId": 8, "count": 5}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"}
+		]
+		},
+	{
+		"name": "Stone Irrigation Pipe - Inclined",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 112,
+		"description": "An inclined stone pipe for an irrigation network, used for transporting water up and down hills.",
+		"image": "stone_irrigation_inclined.png",
+		"weight": 5.0,
+		"recipe": [
+			{"itemId": 8, "count": 10}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"}
+		]
+		},
+	{
+		"name": "Stone Irrigation Pipe - Intersection",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 113,
+		"description": "A plus-shaped stone intersection for an irrigation network, used for splitting one water source into three.",
+		"image": "stone_irrigation_intersection.png",
+		"weight": 5.0,
+		"recipe": [
+			{"itemId": 8, "count": 15}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"}
+		]
+		},
+	{
+		"name": "Stone Irrigation Pipe - Vertical",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 114,
+		"description": "A vertical stone pipe for an irrigation network, used for transporting water up and down cliffs.",
+		"image": "stone_irrigation_vertical.png",
+		"weight": 5.0,
+		"recipe": [
+			{"itemId": 8, "count": 5}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"}
+		]
+		},
+	{
+		"name": "Stone Irrigation Pipe - Tap",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 115,
+		"description": "This stone tap allows access to the water in an irrigation network. Can refill containers, irrigate crop plots, or provide a refreshing drink.",
+		"image": "stone_irrigation_tap.png",
+		"weight": 5.0,
+		"recipe": [
+			{"itemId": 8, "count": 10},
+			{"itemId": 7, "count": 15}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"}
+		]
+		},
+	{
 		"name": "Amarberry",
 		"maxStack": 100,
 		"decomposes": 120,
@@ -1335,6 +1518,110 @@ var items = [
 		]
 		},
 	{
+		"name": "Wooden Fence Foundation",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 136,
+		"description": "This very cheap, narrow foundation is used to build fences around an area.",
+		"image": "wooden_fence_foundation.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 7, "count": 10},         
+			{"itemId": 75, "count": 3},
+			{"itemId": 76, "count": 2}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 10000}
+		]
+		},
+	{
+		"name": "Compass",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 137,
+		"description": "Use this to find which direction your are traveling.",
+		"image": "compass.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId": 74, "count": 5},         
+			{"itemId": 73, "count": 5},
+			{"itemId": 76, "count": 30}
+		],
+		"stats": [
+			{"id": 1, "value": "Navigation"}
+		]
+		},
+	{
+		"name": "Slingshot",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 139,
+		"description": "A simple ranged weapon that deals damage from afar. Better for knocking out a target than killing it outright. Requires stone to fire.",
+		"image": "slingshot.png",
+		"weight": 3.0,
+		"recipe": [
+			{"itemId":7, "count":5},
+			{"itemId":76, "count":20},
+			{"itemId":10, "count":1}
+		],
+		"stats": [
+			{"id": 1, "value": "Weapon"},
+			{"id": 5, "value": 40},
+		]
+		},
+	{
+		"name": "Pike",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 140,
+		"description": "A powerful weapon tipped with metal. Unlike the Spear, it cannot be thrown.",
+		"image": "pike.png",
+		"weight": 10.0,
+		"recipe": [
+			{"itemId":74, "count":10},
+			{"itemId":7, "count":10},
+			{"itemId":10, "count":20}
+		],
+		"stats": [
+			{"id": 1, "value": "Weapon"},
+			{"id": 5, "value": 40},
+			{"id": 6, "value": 57.9}
+		]
+		},
+	{
+		"name": "Obsidian",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 140,
+		"description": "A very rare resource, found underground. Can be broken down and used to make modern tech.",
+		"image": "obsidian.png",
+		"weight": 1.0,
+		"recipe": [],
+		"stats": [
+			{"id": 1, "value": "Resource"}
+		]
+		},
+	{
+		"name": "Dinosaur Gateway",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 143,
+		"description": "A large wood and stone gateway that can be used with a Gate to keep most dinosaurs in or out.",
+		"image": "dinosaur_gateway.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 7, "count": 140},
+			{"itemId": 8, "count": 40},
+			{"itemId": 75, "count": 35},
+			{"itemId": 76, "count": 25}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 12500}
+		]
+		},
+	{
 		"name": "Cementing Paste",
 		"maxStack": 100,
 		"decomposes": 120,
@@ -1349,6 +1636,24 @@ var items = [
 		"stats": []
 		},
 	{
+		"name": "Dinosaur Gate",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 147,
+		"description": "A large wooden gate that can be used with a gateway to keep dinosaurs in or out. Cannot be destroyed by any dinosaur.",
+		"image": "dinosaur_gate.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 7, "count": 60},
+			{"itemId": 75, "count": 15},
+			{"itemId": 76, "count": 10}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 7500}
+		]
+		},
+	{
 		"name": "Oil",
 		"maxStack": 100,
 		"decomposes": 120,
@@ -1357,6 +1662,51 @@ var items = [
 		"image": "oil.png",
 		"weight": 1.0,
 		"recipe": [],
+		"stats": [
+			{"id": 1, "value": "Resource"}
+		]
+		},
+	{
+		"name": "Silica Pearls",
+		"maxStack": 100,
+		"decomposes": -1,
+		"itemId": 163,
+		"description": "These pearls are made almost entirely of silicon. Can be refined into silicon plates.",
+		"image": "silica_pearls.png",
+		"weight": 0.02,
+		"recipe": [],
+		"stats": [
+			{"id": 1, "value": "Resource"}
+		]
+		},
+	{
+		"name": "Electronics",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 165,
+		"description": "This multipurpose computer chip can be used to create electronic devices.",
+		"image": "electronics.png",
+		"weight": 0.01,
+		"recipe": [
+			{"itemId": 163, "count": 3},
+			{"itemId": 74, "count": 1}
+		],
+		"stats": [
+			{"id": 1, "value": "Resource"}
+		]
+		},
+	{
+		"name": "Polymer",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 166,
+		"description": "These incredibly strong, lightweight plates can be shaped and then heat treated into casings for anything.",
+		"image": "polymer.png",
+		"weight": 0.25,
+		"recipe": [
+			{"itemId": 140, "count": 2},
+			{"itemId": 146, "count": 2}
+		],
 		"stats": [
 			{"id": 1, "value": "Resource"}
 		]
@@ -1550,6 +1900,42 @@ var items = [
 		"stats": [
 			{"id": 1, "value": "Structure"},
 			{"id": 5, "value": 15000}
+		]
+		},
+	{
+		"name": "Reinforced Dinosaur Gate",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 319,
+		"description": "A large, reinforced wooden gat that can be used with a Gateway to keep dinosaurs in or out.",
+		"image": "reinforced_dinosaur_gate.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 8,"count": 60},
+			{"itemId": 7,"count": 30},
+			{"itemId": 75,"count": 20}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 6250}
+		]
+		},
+	{
+		"name": "Stone Dinosaur Gateway",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 320,
+		"description": "A large brick-and-mortar gateway that can be used with a Gate to keep most dinosaurs in or out.",
+		"image": "stone_dinosaur_gateway.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 8,"count": 140},
+			{"itemId": 7,"count": 70},
+			{"itemId": 75,"count": 50}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 10000}
 		]
 		},
 	{

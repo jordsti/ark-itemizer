@@ -10,13 +10,14 @@ Items Database
 [ ] - Chitin Review Helmet isolation
 [x] - Stone Structure Tier
 [ ] - Metal Structure Tier
-[ ] - Metal Weapons (Pick, hatchet, Pike)
+[x] - Metal Weapons (Pick, hatchet, Pike)
+[ ] - Review Metal hatchet durability
 [ ] - Guns
 [ ] - Guns bullets
 [x] - Crafting station (Forge, Smithy, Fabricator)
 [ ] - Flak Armor
 [ ] - Explosives (C4, Grenade, Improvised, remote Detonator)
-[ ] - Water Jar
+[x] - Water Jar
 [x] - Blood Pack and Syringe
 [x] - Berries
 [ ] - Brews
@@ -25,17 +26,23 @@ Items Database
 [ ] - Saddles
 [x] - Storage Box
 [ ] - Review Boxes HP
-[ ] - Stone Irrigation
+[x] - Stone Irrigation
 [ ] - Metal Irrigation
 [x] - Simple Bed
 [ ] - Crop plot
 [ ] - Compost bin
 [ ] - Seeds
-[ ] - Dinos Gate
+[x] - (Wooden and Stone) Dinos Gate
+[ ] - Metal Dino Gate
 [x] - Parachute
 [ ] - Electricals items
 [ ] - Gun accessories
 [x] - Prime meat
 [ ] - Reinforced Wooden Door
-[ ] - Compass
+[ ] - Compass (review ingredients)
 [x] - Preserving bin
+[ ] - Meat Jerky
+[x] - Slingshot
+[ ] - Fence Foundation (Wooden is already there)
+[ ] - Cooking Pot
+

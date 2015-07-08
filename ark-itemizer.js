@@ -10,9 +10,9 @@ function arkShowItemStats(containerId)
 	var container = $('#'+containerId);
 	if(container)
 	{
-		for(var i=0; i<itemStats.length; i++)
+		for(var i=0; i<ark_itemStats.length; i++)
 		{
-			container.append(itemStats[i].name+' : '+itemStats[i].id+'<br />');
+			container.append(ark_itemStats[i].name+' : '+ark_itemStats[i].id+'<br />');
 		}
 	}
 }
@@ -23,9 +23,9 @@ function arkShowItemList(containerId)
 	
 	if(container)
 	{
-		for(var i=0; i<items.length; i++)
+		for(var i=0; i<ark_items.length; i++)
 		{
-			container.append(items[i].name+' : '+items[i].itemId+'<br />');
+			container.append(ark_items[i].name+' : '+ark_items[i].itemId+'<br />');
 		}
 	}
 }
@@ -34,11 +34,11 @@ function arkGetStatById(statId)
 {
 	var stat = null;
 	
-	for(var i=0; i<itemStats.length; i++)
+	for(var i=0; i<ark_itemStats.length; i++)
 	{
-		if(itemStats[i].id == statId)
+		if(ark_itemStats[i].id == statId)
 		{
-			stat = itemStats[i];
+			stat = ark_itemStats[i];
 		}
 	}
 	
@@ -50,11 +50,28 @@ function arkShowItemPerId(itemId, containerId)
 {
 	var item = null;
 	
-	for(var i=0; i<items.length; i++)
+	for(var i=0; i<ark_items.length; i++)
 	{
-		if(items[i].itemId == itemId)
+		if(ark_items[i].itemId == itemId)
 		{
-			item = items[i];
+			item = ark_items[i];
+		}
+	}
+	
+	if(item)
+	{
+		arkShowItemPopup(item, containerId);
+	}
+}
+
+function arkShowItemPerName(itemName, containerId)
+{
+	var item = null;
+	for(var i=0; i<ark_items.length; i++)
+	{
+		if(ark_items[i].name.toLowerCase() == itemName.toLowerCase())
+		{
+			item = ark_items[i];
 		}
 	}
 	
@@ -68,11 +85,11 @@ function arkGetItemById(itemId)
 {
 	var item = null;
 	
-	for(var i=0; i<items.length; i++)
+	for(var i=0; i<ark_items.length; i++)
 	{
-		if(items[i].itemId == itemId)
+		if(ark_items[i].itemId == itemId)
 		{
-			item = items[i];
+			item = ark_items[i];
 		}
 	}
 	return item;

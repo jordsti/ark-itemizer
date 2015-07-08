@@ -6,3 +6,18 @@
 	font-weight: bold;
 	color: blue;
 }
+
+.ark-item-name {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.ark-item-popup {
+	font-size: 12px;
+	margin: 2px;
+	padding: 2px;
+	width: 220px;
+	border: 1px solid black;
+	background-color: #A2A4F2;
+	opacity: 0.8;
+}
