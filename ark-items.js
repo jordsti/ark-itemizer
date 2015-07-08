@@ -37,6 +37,63 @@ var ark_itemStats = [
 
 var ark_items = [
 	{
+		"name": "Simple Pistol",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 1,
+		"description": "This simple revolver trades accuracy for flexibility.",
+		"image": "simple_pistol.png",
+		"weight": 5,
+		"recipe": [
+			{"itemId": 74, "count": 60},
+			{"itemId": 7, "count": 5},
+			{"itemId": 10, "count": 15}
+		],
+		"stats": [
+			{"id": 1, "value": "Weapon"},
+			{"id": 5, "value": 40},
+			{"id": 6, "value": 42.6}
+		]
+		},
+	{
+		"name": "Assault Rifle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 2,
+		"description": "The fastest way to fill a target with holes.",
+		"image": "assault_rifle.png",
+		"weight": 10,
+		"recipe": [
+			{"itemId": 166, "count": 60},
+			{"itemId": 74, "count": 35},
+			{"itemId": 146, "count": 50}
+		],
+		"stats": [
+			{"id": 1, "value": "Weapon"},
+			{"id": 5, "value": 40},
+			{"id": 6, "value": 30}
+		]
+		},
+	{
+		"name": "Rocket Launcher",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 3,
+		"description": "Mankind's ultimate portable killing device.",
+		"image": "rocket_launcher.png",
+		"weight": 20,
+		"recipe": [
+			{"itemId": 166, "count": 80},
+			{"itemId": 74, "count": 50},
+			{"itemId": 146, "count": 60}
+		],
+		"stats": [
+			{"id": 1, "value": "Weapon"},
+			{"id": 5, "value": 50},
+			{"id": 6, "value": "149 (direct hit)"}
+		]
+		},
+	{
 		"name": "Simple Bullet",
 		"maxStack": 50,
 		"decomposes": 120,
@@ -68,6 +125,28 @@ var ark_items = [
 			{"id": 1, "value": "Weapon"},
 			{"id": 5, "value": 50},
 			{"id": 6, "value": "60 (fully charged), 26 (minimum charge)"}
+		]
+		},
+	{
+		"name": "Grenade",
+		"maxStack": 10,
+		"decomposes": 120,
+		"itemId": 6,
+		"description": "Pulling the pin starts a 5 second timer to an explosion. Make sure you've thrown it by then.",
+		"image": "grenade.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId": 76, "count": 15},
+			{"itemId": 8, "count": 20},
+			{"itemId": 109, "count": 30},
+			{"itemId": 10, "count": 5},
+			{"itemId": 74, "count": 2},
+			{"itemId": 162, "count": 4}
+		],
+		"stats": [
+			{"id": 1, "value": "Weapon"},
+			{"id": 5, "value": 40},
+			{"id": 6, "value": 750}
 		]
 		},
 	{
@@ -663,6 +742,45 @@ var ark_items = [
 		]
 		},
 	{
+		"name": "C4 Remote Detonator",
+		"maxStack": 1,
+		"decomposes": -1,
+		"itemId": 42,
+		"description": "This device uses radio waves to detonate primed C4 packages on the same frequency.",
+		"image": "c4_remote_detonator.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId": 166, "count": 20},
+			{"itemId": 165, "count": 50},
+			{"itemId": 78, "count": 10},
+			{"itemId": 74, "count": 10},
+			{"itemId": 146, "count": 15}
+		],
+		"stats": [
+			{"id": 1, "value": "Weapon"},
+		]
+		},
+	{
+		"name": "C4 Charge",
+		"maxStack": 50,
+		"decomposes": 120,
+		"itemId": 43,
+		"description": "This advanced explosive can annihilate structures.",
+		"image": "c4_charge.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId": 109, "count": 75},
+			{"itemId": 78, "count": 25},
+			{"itemId": 146, "count": 5},
+			{"itemId": 76, "count": 50},
+			{"itemId": 10, "count": 5},
+			{"itemId": 166, "count": 10}
+		],
+		"stats": [
+			{"id": 1, "value": "Ammunition"},
+		]
+		},
+	{
 		"name": "Blood Extraction Syringe",
 		"maxStack": 1,
 		"decomposes": -1,
@@ -691,6 +809,26 @@ var ark_items = [
 			{"id": 1, "value": "Consumable"},
 			{"id": 7, "value": "15 over 2 seconds"},
 			{"id": 13, "value": "40 seconds"}
+		]
+		},
+	{
+		"name": "Improvised Explosive Device",
+		"maxStack": 10,
+		"decomposes": 120,
+		"itemId": 46,
+		"description": "Place two of these near each other to create an explosive trap.",
+		"image": "improvised_explosive_device.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId": 109, "count": 50},
+			{"itemId": 78, "count": 10},
+			{"itemId": 76, "count": 35},
+			{"itemId": 10, "count": 5},
+			{"itemId": 74, "count": 10},
+			{"itemId": 7, "count": 1}
+		],
+		"stats": [
+			{"id": 1, "value": "Weapon"}
 		]
 		},
 	{
@@ -1496,6 +1634,43 @@ var ark_items = [
 		"stats": [
 			{"id": 1, "value": "Structure"},
 			{"id": 5, "value": 2500}
+		]
+		},
+	{
+		"name": "Compost Bin",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 127,
+		"description": "A large bin for converting thatch and dung into high-quality fertilizer.",
+		"image": "compost_bin.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 7, "count": 50},
+			{"itemId": 73, "count": 15},
+			{"itemId": 76, "count": 12}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 500}
+		]
+		},
+	{
+		"name": "Cooking Pot",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 128,
+		"description": "Must contain basic fuel to light the fire. Put various ingredients with water in this to make soups, stews, and dyes.",
+		"image": "cooking_pot.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 7, "count": 75},
+			{"itemId": 75, "count": 15},
+			{"itemId": 8, "count": 10},
+			{"itemId": 73, "count": 5}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 500}
 		]
 		},
 	{

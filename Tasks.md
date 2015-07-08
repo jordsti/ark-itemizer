@@ -12,11 +12,11 @@ Items Database
 [ ] - Metal Structure Tier
 [x] - Metal Weapons (Pick, hatchet, Pike)
 [ ] - Review Metal hatchet durability
-[ ] - Guns
+[x] - Guns
 [ ] - Guns bullets
 [x] - Crafting station (Forge, Smithy, Fabricator)
 [ ] - Flak Armor
-[ ] - Explosives (C4, Grenade, Improvised, remote Detonator)
+[x] - Explosives (C4, Grenade, Improvised, remote Detonator)
 [x] - Water Jar
 [x] - Blood Pack and Syringe
 [x] - Berries
@@ -30,7 +30,7 @@ Items Database
 [ ] - Metal Irrigation
 [x] - Simple Bed
 [ ] - Crop plot
-[ ] - Compost bin
+[x] - Compost bin
 [ ] - Seeds
 [x] - (Wooden and Stone) Dinos Gate
 [ ] - Metal Dino Gate
@@ -44,5 +44,5 @@ Items Database
 [ ] - Meat Jerky
 [x] - Slingshot
 [ ] - Fence Foundation (Wooden is already there)
-[ ] - Cooking Pot
+[x] - Cooking Pot
 

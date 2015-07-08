@@ -1,3 +1,42 @@
+function arkLaunchSearch(containerId)
+{
+	//clear container first
+	$('#'+containerId).empty();
+	
+	var itemSub = $('#ark-search-name').val();
+	
+	var results = arkSearchItems(itemSub);
+	
+	for(var i=0; i<results.length; i++)
+	{
+		var html = '<div class="ark-item-result">';
+		
+		html += '<div class="ark-item-name"><a class="ark-js-link" onclick="arkShowItemPerId('+results[i].itemId+',\'search-result\')">'+results[i].name+'</a></div>';
+		
+		html += '</div>';
+		
+		$('#'+containerId).append(html);
+	}
+	
+}
+
+function arkSearchItems(itemSubString)
+{
+	var results = new Array();
+	
+	for(var i=0; i<ark_items.length; i++)
+	{
+		var itemName = ark_items[i].name.toLowerCase();
+		var index = itemName.indexOf(itemSubString.toLowerCase());
+		if(index != -1)
+		{
+			results.push(ark_items[i]);
+		}
+	}
+	
+	return results;
+}
+
 function arkTestItem(containerId)
 {
 	var itemId = $('#test_item_id').val();
