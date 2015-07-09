@@ -1,3 +1,10 @@
+var ark_popupRegistry = new Array();
+var ark_popupIterator = 0;
+var ark_popupDefaultLength = 25;
+var ark_mouseX = 0;
+var ark_mouseY = 0;
+var ark_currentItemList = new Array();
+
 function arkLaunchSearch(containerId)
 {
 	//clear container first
@@ -18,6 +25,102 @@ function arkLaunchSearch(containerId)
 		$('#'+containerId).append(html);
 	}
 	
+}
+
+function arkGetArkItemsVersion()
+{
+	return ark_itemsVersion.ark.major + '.' + ark_itemsVersion.ark.minor;
+}
+
+function arkInjectCalculator(containerId)
+{
+	var container = $('#'+containerId);
+	
+	var html = '<div class="ark-item-selector">';
+	
+	html += '<label for="ark-item-selector-id">Item</label>';
+	html += '<select name="ark-item-selector-id" id="ark-item-selector-id">';
+	
+	for(var i=0; i<ark_items.length; i++)
+	{
+		html += '<option value="'+ark_items[i].itemId+'">'+ark_items[i].name+'</option>';
+	}
+	
+	html += '</select>';
+	
+	html += '<input type="text" name="ark-calculator-quantity" id="ark-calculator-quantity" value="1" />';
+	
+	html += '<button onclick="arkCalculatorAddItem();">Add</button>';
+	html += '<h4>Items</h4>';
+	html += '<div id="ark-calculator-current-item">';
+	
+	html += '</div>';
+	html += '<h4>Totals</h4>';
+	html += '<div id="ark-calculator-totals"></div>';
+	
+	html += '<button onclick="arkCalculatorClearItems();">Clear</button>';
+	html += '</div>';
+	
+	container.append(html);
+	
+}
+
+function arkCalculatorClearItems()
+{
+	ark_currentItemList = new Array();
+	arkCalculatorRenderCurrentItem();
+}
+
+function arkCalculatorAddItem()
+{
+	
+	var _itemId = $('#ark-item-selector-id').val();
+	var qty = parseInt($('#ark-calculator-quantity').val());
+
+	var entry = {
+		"itemId": _itemId,
+		"count": qty,
+	};
+
+	ark_currentItemList.push(entry);
+	arkCalculatorRenderCurrentItem();
+}
+
+function arkCalculatorRenderCurrentItem()
+{
+	$('#ark-calculator-current-item').empty();
+	for(var i=0; i<ark_currentItemList.length; i++)
+	{;
+		var item = arkGetItemById(ark_currentItemList[i].itemId);
+		
+		
+		if(item)
+		{
+			var html = '<div id="ark-calculator-entry-'+i+'">';
+			html += '<strong>' + item.name + '</strong>';
+			html += ' ' + ark_currentItemList[i].count;
+			html += '</div>';
+			
+			$('#ark-calculator-current-item').append(html);
+		}
+
+	}
+	
+	var costs = arkCalculateCostForItems(ark_currentItemList);
+	
+	var container = $('#ark-calculator-totals');
+	container.empty();
+	
+	for(var i=0; i<costs.length; i++)
+	{
+		var item = arkGetItemById(costs[i].itemId);
+		
+		var chtml = '<div id="ark-calculator-totals-cost-'+i+'">';
+		chtml += costs[i].count + ' x ' + '<img width="16" height="16" src="images/'+item.image+'" /><a class="ark-js-link" onmouseover="arkMouseOverPopup('+item.itemId+', \'ark-calculator-totals-cost-'+i+'\');">' + item.name + '</a>';
+		chtml += '</div>';
+		
+		container.append(chtml);
+	}
 }
 
 function arkSearchItems(itemSubString)
@@ -83,6 +186,88 @@ function arkGetStatById(statId)
 	
 	return stat;
 	
+}
+
+function arkGetCostByItemId(costs, itemId)
+{
+	for(var i=0; i<costs.length; i++)
+	{
+		if(costs[i].itemId == itemId)
+		{
+			return costs[i];
+		}
+	}
+	
+	return null;
+}
+
+function arkMergeCosts(costs, costs2)
+{
+	var _costs = new Array();
+	
+	for(var i=0; i<costs.length; i++)
+	{
+		_costs.push(costs[i]);
+	}
+	
+	for(var i=0; i<costs2.length; i++)
+	{
+		var cost = arkGetCostByItemId(_costs, costs2[i].itemId);
+		if(cost)
+		{
+			cost.count = cost.count + costs2[i].count;
+		}
+		else
+		{
+			_costs.push(costs2[i]);
+		}
+	}
+	
+	
+	return _costs;
+}
+
+function arkCalculateItemCost(itemId, _count)
+{
+	var costs = new Array();
+	var item = arkGetItemById(itemId);
+	if(item)
+	{
+		
+		if(item.recipe.length > 0)
+		{
+			for(var i=0; i<item.recipe.length; i++)
+			{
+				var _item = arkGetItemById(item.recipe[i].itemId);
+				if(_item)
+				{
+					var _costs = arkCalculateItemCost(_item.itemId, item.recipe[i].count * _count);
+					costs = arkMergeCosts(costs, _costs);
+				}
+			}
+		}
+		else
+		{
+			var cost = {
+				itemId: item.itemId,
+				count: _count,
+			}
+			costs.push(cost);
+		}
+	}
+	
+	return costs;
+}
+
+function arkCalculateCostForItems(items)
+{
+	var costs = new Array();
+	for(var i=0; i<items.length; i++)
+	{
+		var _costs = arkCalculateItemCost(items[i].itemId, items[i].count);
+		costs = arkMergeCosts(costs, _costs);
+	}
+	return costs;
 }
 
 function arkShowItemPerId(itemId, containerId)
@@ -179,9 +364,117 @@ function arkFormatWeight(itemWeight)
 	}
 }
 
+function arkNewPopup(arkItem)
+{
+	ark_popupIterator++;
+	var _id = ark_popupIterator;
+	
+	var popup = {
+		id: _id,
+		active: true,
+		item: arkItem,
+		tick: 0,
+		length: ark_popupDefaultLength,
+	};
+	
+	ark_popupRegistry.push(popup);
+	
+	return _id;
+}
+
+function arkInit()
+{
+	$(document).mousemove(function(e) {
+    ark_mouseX = e.pageX;
+    ark_mouseY = e.pageY;
+	}).mouseover();
+	
+	console.log('ARK Items : '+arkGetArkItemsVersion());
+	
+	setInterval(tickPopups, 100);
+}
+
+function tickPopups()
+{
+	for(var i=0; i<ark_popupRegistry.length; i++)
+	{
+		var popup = ark_popupRegistry[i];
+		if(popup.active)
+		{
+			popup.tick++;
+			
+			if(popup.tick > popup.length)
+			{
+				popup.active = false;
+				arkCloseItemPopup(popup.id);
+			}
+		}
+	}
+	
+	//todo swap array and deleting inactive popup
+}
+
+function arkTestItemCosts()
+{
+	
+	var itemCosts = [{
+		itemId: 70,
+		count: 3,
+		}];
+	
+	var costs = arkCalculateCostForItems(itemCosts);
+	console.log(costs);
+	$('#item-costs').append(costs.length);
+	
+}
+
+function arkClearPopups()
+{
+	
+	for(var i=0; i<ark_popupRegistry.length; i++)
+	{
+		arkCloseItemPopup(ark_popupRegistry[i].id);
+		console.log(ark_popupRegistry[i].id);
+	}
+	
+	ark_popupRegistry = new Array();
+	
+}
+
+function arkMouseOverPopup(itemId, containerId)
+{
+	
+	var item = arkGetItemById(itemId);
+	
+	//for(var i=0; i<ark_popupRegistry.length; i++)
+	//{
+	//	var popup = ark_popupRegistry[i];
+	//	if(popup.active && popup.item == item)
+	//	{
+	//		popupExists = true;
+	//	}
+	//}
+	
+	arkClearPopups();
+	
+	if(item)
+	{
+		var htmlId = arkShowItemPopup(item, containerId);
+		
+		$('#ark-popup-'+htmlId).css('position','fixed');
+		$('#ark-popup-'+htmlId).css('z-index', 1);
+		$('#ark-popup-'+htmlId).css('top',ark_mouseY+'px');
+		$('#ark-popup-'+htmlId).css('left',ark_mouseX+'px');
+		
+	}
+	
+}
+
 function arkShowItemPopup(item, containerId)
 {
-	var html = '<div class="ark-item-popup" id="ark-item-'+item.itemId+'">';
+	
+	var htmlId = arkNewPopup(item);
+	var html = '<div class="ark-item-popup" id="ark-popup-'+htmlId+'">';
 		
 	html += '<div class="ark-item-name">'+item.name+'</div>';
 	html += '<div class="ark-item-image"><img src="images/'+item.image+'"/></div>';
@@ -239,13 +532,14 @@ function arkShowItemPopup(item, containerId)
 	}
 	
 	html += '</div>';
-	html += '<a class="ark-js-link" onclick="arkCloseItemPopup('+item.itemId+');">Close</a>';
+	html += '<a class="ark-js-link" onclick="arkCloseItemPopup('+htmlId+');">Close</a>';
 	html += '</div>';
 	
 	$('#'+containerId).append(html);
+	return htmlId;
 }
 
-function arkCloseItemPopup(itemId)
+function arkCloseItemPopup(popupId)
 {
-	$('#ark-item-'+itemId).remove();
+	$('#ark-popup-'+popupId).remove();
 }

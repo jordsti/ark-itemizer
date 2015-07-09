@@ -19,6 +19,11 @@
 //			id : Stat ID
 //			value : Stat Value
 
+var ark_itemsVersion = {
+	itemizer: 0,
+	ark: {major: 184, minor: 0}
+};
+
 var ark_itemStats = [
 	{"id": 1, "name": "Type"},
 	{"id": 2, "name": "Armor"},
@@ -939,7 +944,7 @@ var ark_items = [
 		"image": "charcoal.png",
 		"weight": 0.25,
 		"recipe": [
-			{"itemId": 7, "count": 1}
+			{"itemId": 7, "count": 1},
 		],
 		"stats": []
 		},

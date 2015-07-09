@@ -46,3 +46,8 @@ Items Database
 [ ] - Fence Foundation (Wooden is already there)
 [x] - Cooking Pot
 
+
+Features
+===
+[ ] - Close popup when the distance when the mouse is far
+[ ] - More css..
