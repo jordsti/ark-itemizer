@@ -9,7 +9,7 @@ Items Database
  - [ ] Review Chitin armor tier weight
  - [ ] Chitin Review Helmet isolation
  - [x] Stone Structure Tier
- - [ ] Metal Structure Tier
+ - [x] Metal Structure Tier
  - [x] Metal Weapons (Pick, hatchet, Pike)
  - [ ] Review Metal hatchet durability
  - [x] Guns
@@ -23,7 +23,7 @@ Items Database
  - [ ] Brews
  - [ ] Dyes
  - [ ] Feces
- - [ ] Saddles
+ - [x] Saddles
  - [x] Storage Box
  - [ ] Review Boxes HP
  - [x] Stone Irrigation
@@ -31,20 +31,22 @@ Items Database
  - [x] Simple Bed
  - [ ] Crop plot
  - [x] Compost bin
- - [ ] Seeds
+ - [x] Seeds (Bushberry not implemented in the game ?)
  - [x] (Wooden and Stone) Dinos Gate
- - [ ] Metal Dino Gate
+ - [x] Metal Dino Gate
  - [x] Parachute
  - [ ] Electricals items
  - [ ] Gun accessories
  - [x] Prime meat
- - [ ] Reinforced Wooden Door
+ - [x] Reinforced Wooden Door
  - [ ] Compass (review ingredients)
  - [x] Preserving bin
  - [ ] Meat Jerky
  - [x] Slingshot
  - [ ] Fence Foundation (Wooden is already there)
  - [x] Cooking Pot
+ - [ ] Wall Sign, Metal Wall Sign, Wooden Sign
+ 
 
 
 Features

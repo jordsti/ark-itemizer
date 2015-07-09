@@ -113,13 +113,27 @@ function arkCalculatorRenderCurrentItem()
 	
 	for(var i=0; i<costs.length; i++)
 	{
-		var item = arkGetItemById(costs[i].itemId);
-		
-		var chtml = '<div id="ark-calculator-totals-cost-'+i+'">';
-		chtml += costs[i].count + ' x ' + '<img width="16" height="16" src="images/'+item.image+'" /><a class="ark-js-link" onmouseover="arkMouseOverPopup('+item.itemId+', \'ark-calculator-totals-cost-'+i+'\');">' + item.name + '</a>';
-		chtml += '</div>';
-		
-		container.append(chtml);
+		if(costs[i].itemId2)
+		{
+			var item = arkGetItemById(costs[i].itemId);
+			var item2 = arkGetItemById(costs[i].itemId2);
+			
+			var chtml = '<div id="ark-calculator-totals-cost-'+i+'">';
+			chtml += costs[i].count + ' x ' + '<img width="16" height="16" src="images/'+item.image+'" /><a class="ark-js-link" onmouseover="arkMouseOverPopup('+item.itemId+', \'ark-calculator-totals-cost-'+i+'\');">' + item.name + '</a> or <img width="16" height="16" src="images/'+item2.image+'" /><a class="ark-js-link" onmouseover="arkMouseOverPopup('+item2.itemId+', \'ark-calculator-totals-cost-'+i+'\');">' + item2.name + '</a>';
+			chtml += '</div>';
+			
+			container.append(chtml);
+		}
+		else
+		{
+			var item = arkGetItemById(costs[i].itemId);
+			
+			var chtml = '<div id="ark-calculator-totals-cost-'+i+'">';
+			chtml += costs[i].count + ' x ' + '<img width="16" height="16" src="images/'+item.image+'" /><a class="ark-js-link" onmouseover="arkMouseOverPopup('+item.itemId+', \'ark-calculator-totals-cost-'+i+'\');">' + item.name + '</a>';
+			chtml += '</div>';
+			
+			container.append(chtml);
+		}
 	}
 }
 
@@ -238,11 +252,24 @@ function arkCalculateItemCost(itemId, _count)
 		{
 			for(var i=0; i<item.recipe.length; i++)
 			{
-				var _item = arkGetItemById(item.recipe[i].itemId);
-				if(_item)
+				if(item.recipe[i].itemId2)
 				{
-					var _costs = arkCalculateItemCost(_item.itemId, item.recipe[i].count * _count);
-					costs = arkMergeCosts(costs, _costs);
+					var cost = {
+							itemId: item.recipe[i].itemId,
+							itemId2: item.recipe[i].itemId2,
+							count: item.recipe[i].count * _count
+						};
+						
+					costs.push(cost);
+				}
+				else
+				{
+					var _item = arkGetItemById(item.recipe[i].itemId);
+					if(_item)
+					{
+						var _costs = arkCalculateItemCost(_item.itemId, item.recipe[i].count * _count);
+						costs = arkMergeCosts(costs, _costs);
+					}
 				}
 			}
 		}

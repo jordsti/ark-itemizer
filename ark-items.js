@@ -873,6 +873,41 @@ var ark_items = [
 		]
 		},
 	{
+		"name": "Rex Saddle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 69,
+		"description": "Equip a T-rex with this to ride it.",
+		"image": "rex_saddle.png",
+		"weight": 20.0,
+		"recipe": [
+			{"itemId":10, "count":380},
+			{"itemId":76, "count":200},
+			{"itemId":74, "count":50}
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+			{"id": 2, "value": 25},
+		]
+		},
+	{
+		"name": "GPS",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 72,
+		"description": "Detects strange energy from the three Obelisks to triangulate your exact location on the island.",
+		"image": "gps.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId":166, "count":5},
+			{"itemId":165, "count":20}
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+			{"id": 2, "value": 25},
+		]
+		},
+	{
 		"name": "Tranquilizer Arrow",
 		"maxStack": 100,
 		"decomposes": -1,
@@ -1301,6 +1336,112 @@ var ark_items = [
 		]
 		},
 	{
+		"name": "Citronal",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 99,
+		"description": "This citrus fruit grows naturally along the coast. It will probably prevent scurvy.",
+		"image": "citronal.png",
+		"weight": 0.1,
+		"recipe": [],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 7, "value": "+5"},
+			{"id": 8, "value": "+20"},
+			{"id": 11, "value": "+15"}
+		]
+		},
+	{
+		"name": "Parasaur Saddle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 100,
+		"description": "Equip a Parasaur with this to ride it.",
+		"image": "parasaur_saddle.png",
+		"weight": 20.0,
+		"recipe": [
+			{"itemId":10, "count":80},
+			{"itemId":76, "count":50},
+			{"itemId":7, "count":15}
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+			{"id": 2, "value": 50},
+		]
+		},
+	{
+		"name": "Raptor Saddle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 101,
+		"description": "Equip a Raptor with this to ride it.",
+		"image": "raptor_saddle.png",
+		"weight": 20.0,
+		"recipe": [
+			{"itemId":10, "count":110},
+			{"itemId":76, "count":65},
+			{"itemId":7, "count":20}
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+			{"id": 2, "value": 25},
+		]
+		},
+	{
+		"name": "Stegosaurus Saddle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 102,
+		"description": "Equip a Stego with this to ride it.",
+		"image": "stego_saddle.png",
+		"weight": 20.0,
+		"recipe": [
+			{"itemId":10, "count":200},
+			{"itemId":76, "count":110},
+			{"itemId":7, "count":35}
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+			{"id": 2, "value": 27.2},
+		]
+		},
+	{
+		"name": "Triceratops Saddle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 103,
+		"description": "Equip a Triceratops with this to ride it.",
+		"image": "trike_saddle.png",
+		"weight": 20.0,
+		"recipe": [
+			{"itemId":10, "count":140},
+			{"itemId":76, "count":80},
+			{"itemId":7, "count":25}
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+			{"id": 2, "value": 50},
+		]
+		},
+	{
+		"name": "Pulmonoscorpius Saddle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 104,
+		"description": "Equip a Pulmonoscorpius with this to ride it.",
+		"image": "pulmonoscorpius_saddle.png",
+		"weight": 20.0,
+		"recipe": [
+			{"itemId":10, "count":170},
+			{"itemId":76, "count":95},
+			{"itemId":7, "count":30}
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+			{"id": 2, "value": 27.5},
+		]
+		},
+	{
 		"name": "Storage Box",
 		"maxStack": 100,
 		"decomposes": 120,
@@ -1469,6 +1610,20 @@ var ark_items = [
 		],
 		"stats": [
 			{"id": 1, "value": "Structure"}
+		]
+		},
+	{
+		"name": "Amarberry Seed",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 116,
+		"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own amarberry bush. Can be planted in Small, Medium, or Large crop plots.",
+		"image": "amarberry_seed.png",
+		"weight": 0.01,
+		"recipe": [],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 8, "value": "+1"}
 		]
 		},
 	{
@@ -1698,6 +1853,56 @@ var ark_items = [
 		]
 		},
 	{
+		"name": "Pteranodon Saddle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 131,
+		"description": "Equip a Pteranodon with this to ride it.",
+		"image": "pteranodon_saddle.png",
+		"weight": 20.0,
+		"recipe": [
+			{"itemId":10, "count":230},
+			{"itemId":76, "count":125},
+			{"itemId":11, "itemId2":217, "count":75}
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+			{"id": 2, "value": 50},
+		]
+		},
+	{
+		"name": "Citronal Seed",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 133,
+		"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own citronal crop. Can be planted in Medium or Large crop plots.",
+		"image": "citronal_seed.png",
+		"weight": 0.01,
+		"recipe": [],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 8, "value": "+1"}
+		]
+		},
+	{
+		"name": "Bronto Saddle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 135,
+		"description": "Equip a Bronto with this to ride it.",
+		"image": "bronto_saddle.png",
+		"weight": 20.0,
+		"recipe": [
+			{"itemId":10, "count":350},
+			{"itemId":76, "count":185},
+			{"itemId":74, "count":40}
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+			{"id": 2, "value": 25},
+		]
+		},
+	{
 		"name": "Wooden Fence Foundation",
 		"maxStack": 100,
 		"decomposes": 120,
@@ -1773,7 +1978,7 @@ var ark_items = [
 		"name": "Obsidian",
 		"maxStack": 100,
 		"decomposes": 120,
-		"itemId": 140,
+		"itemId": 142,
 		"description": "A very rare resource, found underground. Can be broken down and used to make modern tech.",
 		"image": "obsidian.png",
 		"weight": 1.0,
@@ -1892,6 +2097,276 @@ var ark_items = [
 		]
 		},
 	{
+		"name": "Metal Catwalk",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 167,
+		"description": "A thin walkway for bridging areas together. Made from metal plates.",
+		"image": "metal_catwalk.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 74, "count": 15},
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 6250}
+		]
+		},
+	{
+		"name": "Metal Ceiling",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 168,
+		"description": "A stable metal-plated concrete ceiling that provides insulation, and doubles as a floor for higher levels.",
+		"image": "metal_ceiling.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 74, "count": 35},
+			{"itemId": 146, "count": 10}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 10000}
+		]
+		},
+	{
+		"name": "Metal Hatchframe",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 169,
+		"description": "This metal-plated concrete ceiling has a hole in it for trapdoors.",
+		"image": "metal_hatchframe.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 74, "count": 30},
+			{"itemId": 146, "count": 8}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 10000}
+		]
+		},
+	{
+		"name": "Metal Door",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 170,
+		"description": "A stable metal-plated concrete door that provides entrance to structures. Can be locked for security.",
+		"image": "metal_door.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 74, "count": 10},
+			{"itemId": 146, "count": 4}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 6250}
+		]
+		},
+	{
+		"name": "Metal Fence Foundation",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 171,
+		"description": "This very strong, narrow foundation is used to build walls around an area.",
+		"image": "metal_fence_foundation.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 74, "count": 5},
+			{"itemId": 146, "count": 2}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 10000}
+		]
+		},
+	{
+		"name": "Metal Foundation",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 172,
+		"description": "A foundation is required to build structures in an area. This one is made from sturdy metal-plated concrete.",
+		"image": "metal_foundation.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 74, "count": 50},
+			{"itemId": 146, "count": 15}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 15000}
+		]
+		},
+	{
+		"name": "Behemoth Gate",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 173,
+		"description": "A large metal-plated concrete gate that can be used with a Behemoth Gateway to allow even the largest of creatures in or out.",
+		"image": "behemoth_gate.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 74, "count": 60},
+			{"itemId": 146, "count": 15}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 12500}
+		]
+		},
+	{
+		"name": "Behemoth Gateway",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 174,
+		"description": "A large metal-plated concrete gateway, reinforced with obsidian polymer, that can be used with a Behemoth Gate to allow even the largest of creatures in or out.",
+		"image": "behemoth_gateway.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 74, "count": 135},
+			{"itemId": 146, "count": 35},
+			{"itemId": 166, "count": 20}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 20000}
+		]
+		},
+	{
+		"name": "Metal Ladder",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 175,
+		"description": "A simple metal ladder used to climb up or down tall structures. Can also be used to extend existing ladders.",
+		"image": "metal_ladder.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 74, "count": 7}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 3125}
+		]
+		},
+	{
+		"name": "Metal Pillar",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 176,
+		"description": "This metal-plated concrete pillar adds structural integrity to the area it is built under. Can also act as stilts for building on inclines.",
+		"image": "metal_pillar.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 74, "count": 25},
+			{"itemId": 146, "count": 7}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 6250}
+		]
+		},
+	{
+		"name": "Metal Ramp",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 177,
+		"description": "An inclined metal-plated concrete floor for travelling up or down levels. Can also be used to make an angled roof.",
+		"image": "metal_ramp.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 74, "count": 35},
+			{"itemId": 146, "count": 10}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 10000}
+		]
+		},
+	{
+		"name": "Metal Trapdoor",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 178,
+		"description": "This metal-plated concrete slab can be used to secure hatches.",
+		"image": "metal_trapdoor.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 74, "count": 10},
+			{"itemId": 146, "count": 4}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 6250}
+		]
+		},
+	{
+		"name": "Metal Wall",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 179,
+		"description": "A metal-plated concrete wall that insulates the inside from the outside and separates rooms.",
+		"image": "metal_wall.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 74, "count": 25},
+			{"itemId": 146, "count": 7}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 10000}
+		]
+		},
+	{
+		"name": "Metal Doorframe",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 180,
+		"description": "A metal-plated concrete wall that provides entrance to a structure.",
+		"image": "metal_doorframe.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 74, "count": 20},
+			{"itemId": 146, "count": 6}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 10000}
+		]
+		},
+	{
+		"name": "Metal Windowframe",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 181,
+		"description": "A metal-plated concrete wall, with a hole for a window.",
+		"image": "metal_windowframe.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 74, "count": 20},
+			{"itemId": 146, "count": 6}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 10000}
+		]
+		},
+	{
+		"name": "Metal Window",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 182,
+		"description": "Metal plates on hinges that cover windows to provide protection from projectiles and spying.",
+		"image": "metal_window.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 74, "count": 7}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 6250}
+		]
+		},
+	{
 		"name": "Fabricator",
 		"maxStack": 1,
 		"decomposes": 120,
@@ -1929,6 +2404,169 @@ var ark_items = [
 		]
 		},
 	{
+		"name": "Carbonemys Saddle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 207,
+		"description": "Equip a Carbonemys with this to ride it.",
+		"image": "carbonemys_saddle.png",
+		"weight": 20.0,
+		"recipe": [
+			{"itemId":10, "count":170},
+			{"itemId":76, "count":95},
+			{"itemId":146, "count":10}
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+			{"id": 2, "value": 50},
+		]
+		},
+	{
+		"name": "Sarco Saddle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 208,
+		"description": "Equip a Sarco with this to ride it.",
+		"image": "sarco_saddle.png",
+		"weight": 20.0,
+		"recipe": [
+			{"itemId":10, "count":230},
+			{"itemId":76, "count":75},
+			{"itemId":146, "count":20}
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+			{"id": 2, "value": 50},
+		]
+		},
+	{
+		"name": "Ankylo Saddle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 209,
+		"description": "Equip a Ankylo with this to ride it.",
+		"image": "ankylo_saddle.png",
+		"weight": 20.0,
+		"recipe": [
+			{"itemId":10, "count":260},
+			{"itemId":76, "count":140},
+			{"itemId":74, "count":10}
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+			{"id": 2, "value": 25},
+		]
+		},
+	{
+		"name": "Mammoth Saddle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 210,
+		"description": "Equip a Mammoth with this to ride it.",
+		"image": "mammoth_saddle.png",
+		"weight": 20.0,
+		"recipe": [
+			{"itemId":10, "count":260},
+			{"itemId":76, "count":140},
+			{"itemId":74, "count":10}
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+			{"id": 2, "value": 25},
+		]
+		},
+	{
+		"name": "Megalodon Saddle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 211,
+		"description": "Equip a Megalodon with this to ride it.",
+		"image": "megalodon_saddle.png",
+		"weight": 20.0,
+		"recipe": [
+			{"itemId":10, "count":290},
+			{"itemId":76, "count":155},
+			{"itemId":74, "count":30}
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+			{"id": 2, "value": 50},
+		]
+		},
+	{
+		"name": "Sabertooth Saddle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 212,
+		"description": "Equip a Sabertooth with this to ride it.",
+		"image": "sabertooth_saddle.png",
+		"weight": 20.0,
+		"recipe": [
+			{"itemId":10, "count":290},
+			{"itemId":76, "count":155},
+			{"itemId":74, "count":20}
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+			{"id": 2, "value": 25},
+		]
+		},
+	{
+		"name": "Carno Saddle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 213,
+		"description": "Equip a Carno with this to ride it.",
+		"image": "carno_saddle.png",
+		"weight": 20.0,
+		"recipe": [
+			{"itemId":10, "count":320},
+			{"itemId":76, "count":170},
+			{"itemId":74, "count":30}
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+			{"id": 2, "value": 50},
+		]
+		},
+	{
+		"name": "Argentavis Saddle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 214,
+		"description": "Equip an Argentavis with this to ride it.",
+		"image": "argentavis_saddle.png",
+		"weight": 20.0,
+		"recipe": [
+			{"itemId":10, "count":350},
+			{"itemId":76, "count":185},
+			{"itemId": 11, "itemId2": 217, "count":30}
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+			{"id": 2, "value": 25},
+		]
+		},
+	{
+		"name": "Plesiosaur Saddle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 215,
+		"description": "Equip a Plesiosaur with this to ride it.",
+		"image": "plesiosaur_saddle.png",
+		"weight": 20.0,
+		"recipe": [
+			{"itemId": 10, "count": 400},
+			{"itemId": 76, "count": 250},
+			{"itemId": 146, "count": 65},
+			{"itemId": 163, "count": 40}
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+			{"id": 2, "value": 25},
+		]
+		},
+	{
 		"name": "Keratin",
 		"maxStack": 100,
 		"decomposes": -1,
@@ -1938,6 +2576,118 @@ var ark_items = [
 		"weight": 0.01,
 		"recipe": [],
 		"stats": []
+		},
+	{
+		"name": "Azulberry Seed",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 235,
+		"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own azulberry bush. Can be planted in Small, Medium, or Large crop plots.",
+		"image": "azulberry_seed.png",
+		"weight": 0.01,
+		"recipe": [],
+		"stats": [
+			{"id":1 , "value": "Consumable"},
+			{"id":8 , "value": "+1"}
+		]
+		},
+	{
+		"name": "Tintoberry Seed",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 236,
+		"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Tintoberry bush. Can be planted in Small, Medium, or Large Crop plots.",
+		"image": "tintoberry_seed.png",
+		"weight": 0.01,
+		"recipe": [],
+		"stats": [
+			{"id":1 , "value": "Consumable"},
+			{"id":8 , "value": "+1"}
+		]
+		},
+	{
+		"name": "Mejoberry Seed",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 237,
+		"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Mejoberry bush. Can be planted in Small, Medium, or Large Crop plots.",
+		"image": "mejoberry_seed.png",
+		"weight": 0.01,
+		"recipe": [],
+		"stats": [
+			{"id":1 , "value": "Consumable"},
+			{"id":8 , "value": "+1"}
+		]
+		},
+	{
+		"name": "Narcoberry Seed",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 238,
+		"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Nacroberry bush. Can be planted in Small, Medium, or Large Crop Plots.",
+		"image": "narcoberry_seed.png",
+		"weight": 0.01,
+		"recipe": [],
+		"stats": [
+			{"id":1 , "value": "Consumable"},
+			{"id":8 , "value": "+1"}
+		]
+		},
+	{
+		"name": "Stimberry Seed",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 239,
+		"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Stimberry bush. Can be planted in Small, Medium, or Large Crop plots.",
+		"image": "stimberry_seed.png",
+		"weight": 0.01,
+		"recipe": [],
+		"stats": [
+			{"id":1 , "value": "Consumable"},
+			{"id":8 , "value": "+1"}
+		]
+		},
+	{
+		"name": "Savoroot Seed",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 240,
+		"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own savoroot crop. Can be planted in Medium or Large crop plots.",
+		"image": "savoroot_seed.png",
+		"weight": 0.01,
+		"recipe": [],
+		"stats": [
+			{"id":1 , "value": "Consumable"},
+			{"id":8 , "value": "+1"}
+		]
+		},	
+	{
+		"name": "Longrass Seed",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 241,
+		"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own longrass crop. Can be planted in Medium or Large crop plots.",
+		"image": "longrass_seed.png",
+		"weight": 0.01,
+		"recipe": [],
+		"stats": [
+			{"id":1 , "value": "Consumable"},
+			{"id":8 , "value": "+1"}
+		]
+		},	
+	{
+		"name": "Rockarrot Seed",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 242,
+		"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own rockarrot crop. Can be planted in Medium or Large crop plots.",
+		"image": "rockarrot_seed.png",
+		"weight": 0.01,
+		"recipe": [],
+		"stats": [
+			{"id":1 , "value": "Consumable"},
+			{"id":8 , "value": "+1"}
+		]
 		},
 	{
 		"name": "Raw Prime Meat",
@@ -1974,6 +2724,40 @@ var ark_items = [
 		]
 		},
 	{
+		"name": "Metal Dinosaur Gateway",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 265,
+		"description": "A large metal gateway that can be used with a gate to keep most dinosaurs in or out.",
+		"image": "metal_dinosaur_gateway.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 74, "count": 85},
+			{"itemId": 146, "count": 25}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 10000}
+		]
+		},
+	{
+		"name": "Metal Dinosaur Gate",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 266,
+		"description": "A large metal gate that can be used with a Gateway to keep most dinosaurs in or out.",
+		"image": "metal_dinosaur_gate.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 74, "count": 35},
+			{"itemId": 146, "count": 10}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 6250}
+		]
+		},
+	{
 		"name": "Preserving Bin",
 		"maxStack": 100,
 		"decomposes": 120,
@@ -1990,6 +2774,62 @@ var ark_items = [
 		"stats": [
 			{"id": 1, "value": "Structure"},
 			{"id": 5, "value": 600}
+		]
+		},
+	{
+		"name": "Metal Spike Wall",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 296,
+		"description": "These incredibly sharp metal spikes are dangerous to any that touch them. Large creatures take more damage.",
+		"image": "metal_spike_wall.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 74, "count": 25},
+			{"itemId": 10, "count": 15},
+			{"itemId": 76, "count": 20}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 5000}
+		]
+		},
+	{
+		"name": "Spino Saddle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 303,
+		"description": "Equip a Spino with this to ride it.",
+		"image": "spino_saddle.png",
+		"weight": 20.0,
+		"recipe": [
+			{"itemId": 10, "count": 380},
+			{"itemId": 76, "count": 200},
+			{"itemId": 146, "count": 45},
+			{"itemId": 163, "count": 25}
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+			{"id": 2, "value": 50},
+		]
+		},
+	{
+		"name": "Vault",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 306,
+		"description": "A large metal vault to securely store goods in.",
+		"image": "vault.png",
+		"weight": 20.0,
+		"recipe": [
+			{"itemId": 74, "count": 300},
+			{"itemId": 146, "count": 60},
+			{"itemId": 162, "count": 30},
+			{"itemId": 166, "count": 60}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 50000}
 		]
 		},
 	{
@@ -2011,6 +2851,24 @@ var ark_items = [
 		]
 		},
 	{
+		"name": "Stone Fence Foundation",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 310,
+		"description": "This strong, narrow foundation is used to build walls around an area.",
+		"image": "stone_fence_foundation.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 8,"count": 15},
+			{"itemId": 7,"count": 10},
+			{"itemId": 75,"count": 10}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 10000}
+		]
+		},
+	{
 		"name": "Stone Wall",
 		"maxStack": 100,
 		"decomposes": 120,
@@ -2026,6 +2884,26 @@ var ark_items = [
 		"stats": [
 			{"id": 1, "value": "Structure"},
 			{"id": 5, "value": 10000}
+		]
+		},
+	{
+		"name": "Ichthyosaurus Saddle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 314,
+		"description": "Equip a Ichthyosaurus with this to ride it.",
+		"image": "ichthyosaurus_saddle.png",
+		"weight": 20.0,
+		"recipe": [
+			{"itemId": 10, "count": 55},
+			{"itemId": 76, "count": 50},
+			{"itemId": 7, "count": 20},
+			{"itemId": 9, "count": 10},
+			{"itemId": 73, "count": 8}
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+			{"id": 2, "value": 25},
 		]
 		},
 	{
@@ -2062,6 +2940,24 @@ var ark_items = [
 		"stats": [
 			{"id": 1, "value": "Structure"},
 			{"id": 5, "value": 10000}
+		]
+		},
+	{
+		"name": "Reinforced Wooden Door",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 317,
+		"description": "A reinforced wooden door that provides entrance to structures. Can be locked for security.",
+		"image": "reinforced_wooden_door.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 8,"count": 20},
+			{"itemId": 7,"count": 14},
+			{"itemId": 75,"count": 8}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 6250}
 		]
 		},
 	{
