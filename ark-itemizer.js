@@ -86,6 +86,25 @@ function arkCalculatorAddItem()
 	arkCalculatorRenderCurrentItem();
 }
 
+function arkCalculatorRemoveItem(entryIndex)
+{
+	if(entryIndex < ark_currentItemList.length)
+	{
+		var oldArray = ark_currentItemList;
+		ark_currentItemList = new Array();
+		
+		for(var i=0; i<oldArray.length; i++)
+		{
+			if(i != entryIndex)
+			{
+				ark_currentItemList.push(oldArray[i]);
+			}
+		}
+	}
+	
+	arkCalculatorRenderCurrentItem();
+}
+
 function arkCalculatorRenderCurrentItem()
 {
 	$('#ark-calculator-current-item').empty();
@@ -99,6 +118,7 @@ function arkCalculatorRenderCurrentItem()
 			var html = '<div id="ark-calculator-entry-'+i+'">';
 			html += '<strong>' + item.name + '</strong>';
 			html += ' ' + ark_currentItemList[i].count;
+			html += '<button onclick="arkCalculatorRemoveItem('+i+');">Remove</button>';
 			html += '</div>';
 			
 			$('#ark-calculator-current-item').append(html);

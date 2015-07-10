@@ -1956,6 +1956,25 @@ var ark_items = [
 		]
 		},
 	{
+		"name": "Small Crop Plot",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 130,
+		"description": "A small garden plot, with a fence to keep out vermin.",
+		"image": "small_crop_plot.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 7, "count": 20},         
+			{"itemId": 75, "count": 10},
+			{"itemId": 76, "count": 15},
+			{"itemId": 8, "count": 25}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 5000}
+		]
+		},
+	{
 		"name": "Pteranodon Saddle",
 		"maxStack": 1,
 		"decomposes": 120,
@@ -3233,6 +3252,108 @@ var ark_items = [
 		]
 		},
 	{
+		"name": "Enduro Stew",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 227,
+		"description": "This hearty dish is like a workout in the form of a meal. You will find yourself hitting harder and running longer after eating this.",
+		"image": "enduro_stew.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId": 14, "count": 9},
+			{"itemId": 234, "count": 5},
+			{"itemId": 232, "count": 5},
+			{"itemId": 120, "count": 10},
+			{"itemId": 124, "count": 2},
+		],
+		"stats": [
+			{"id":1 , "value": "Consumable"},
+			{"id":9 , "value": "5:00"}
+		]
+		},
+	{
+		"name": "Lazarus Chowder",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 228,
+		"description": "This creamy dish improves the body's natural constitution. You will recover from injury more quickly after eating this, and your body will need less oxygen.",
+		"image": "lazarus_chowder.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId": 14, "count": 9},
+			{"itemId": 234, "count": 5},
+			{"itemId": 233, "count": 5},
+			{"itemId": 120, "count": 10},
+			{"itemId": 123, "count": 2},
+			{"itemId": 47, "count": 1}
+		],
+		"stats": [
+			{"id":1 , "value": "Consumable"},
+			{"id":9 , "value": "5:00:00"}
+		]
+		},
+	{
+		"name": "Calien Soup",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 229,
+		"description": "This simple vegetarian dish refreshes your body like an oasis. Consume it to gain increased hyperthermic insulation, and slow your rate of water consumption.",
+		"image": "calien_soup.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId": 99, "count": 5},
+			{"itemId": 119, "count": 20},
+			{"itemId": 117, "count": 20},
+			{"itemId": 120, "count": 10},
+			{"itemId": 124, "count": 2},
+		],
+		"stats": [
+			{"id":1 , "value": "Consumable"},
+			{"id":9 , "value": "5:00:00"}
+		]
+		},
+	{
+		"name": "Fria Curry",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 230,
+		"description": "This spicy vegetarian dish fills the body with a comfortable warmth. It controls your appetite while helping you ignore cold.",
+		"image": "fria_curry.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId": 233, "count": 5},
+			{"itemId": 234, "count": 5},
+			{"itemId": 118, "count": 20},
+			{"itemId": 120, "count": 10},
+			{"itemId": 123, "count": 2},
+		],
+		"stats": [
+			{"id":1 , "value": "Consumable"},
+			{"id":9 , "value": "5:00"}
+		]
+		},
+	{
+		"name": "Focal Chili",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 231,
+		"description": "This filling dish is full of nutritional energy. Consume it to gain increased crafting speed, and gain increased movement speed. Effect lasts 15 minutes.",
+		"image": "focal_chili.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId": 14, "count": 9},
+			{"itemId": 99, "count": 5},
+			{"itemId": 117, "count": 20},
+			{"itemId": 118, "count": 20},
+			{"itemId": 119, "count": 20},
+			{"itemId": 120, "count": 10},
+		],
+		"stats": [
+			{"id":1 , "value": "Consumable"},
+			{"id":9 , "value": "5:00"}
+		]
+		},
+	{
 		"name": "Savoroot",
 		"maxStack": 100,
 		"decomposes": 120,
@@ -3464,6 +3585,44 @@ var ark_items = [
 		]
 		},
 	{
+		"name": "Medium Crop Plot",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 248,
+		"description": "A medium garden plot, with a fence to keep out vermin.",
+		"image": "medium_crop_plot.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 7, "count": 40},
+			{"itemId": 75, "count": 20},
+			{"itemId": 76, "count": 30},
+			{"itemId": 8, "count": 50},
+		],
+		"stats": [
+			{"id":1 , "value": "Structure"},
+			{"id":5 , "value": 5000}
+		]
+		},
+	{
+		"name": "Large Crop Plot",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 249,
+		"description": "A large garden plot, with a fence to keep out vermin.",
+		"image": "large_crop_plot.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 7, "count": 80},
+			{"itemId": 75, "count": 40},
+			{"itemId": 76, "count": 60},
+			{"itemId": 8, "count": 100},
+		],
+		"stats": [
+			{"id":1 , "value": "Structure"},
+			{"id":5 , "value": 5000}
+		]
+		},
+	{
 		"name": "Raw Prime Meat",
 		"maxStack": 1,
 		"decomposes": 120,
@@ -3529,6 +3688,23 @@ var ark_items = [
 		"stats": [
 			{"id": 1, "value": "Structure"},
 			{"id": 5, "value": 6250}
+		]
+		},
+	{
+		"name": "Simple Shotgun Ammo",
+		"maxStack": 50,
+		"decomposes": 120,
+		"itemId": 268,
+		"description": "A few simple bullets in a hide casing, used with forged shotguns.",
+		"image": "simple_shotgun_bullet.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId": 4, "count": 3},
+			{"itemId": 74, "count": 1},
+			{"itemId": 109, "count": 3}
+		],
+		"stats": [
+			{"id":1 , "value": "Ammunition"},
 		]
 		},
 	{

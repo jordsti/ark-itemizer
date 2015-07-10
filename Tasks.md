@@ -13,14 +13,19 @@ Items Database
  - [x] Metal Weapons (Pick, hatchet, Pike)
  - [ ] Review Metal hatchet durability
  - [x] Guns
- - [ ] Guns bullets (stillmiss shotgun shell)
+ - [ ] Guns bullets (still miss shotgun shell)
  - [x] Crafting station (Forge, Smithy, Fabricator)
  - [x] Flak Armor
  - [x] Explosives (C4, Grenade, Improvised, remote Detonator)
  - [x] Water Jar
  - [x] Blood Pack and Syringe
  - [x] Berries
- - [ ] Brews
+ - [x] Brews & Stews
+ - [ ] Enduro Stew (Review given stat)
+ - [ ] Lazarus Chowder (Review stats)
+ - [ ] Calien Soup (Review stats)
+ - [ ] Fria Curry (Review stats)
+ - [ ] Focal Chili (Review stats)
  - [ ] Dyes (Coloring)
  - [ ] Feces (small and human are there)
  - [x] Saddles
@@ -29,7 +34,7 @@ Items Database
  - [x] Stone Irrigation
  - [x] Metal Irrigation
  - [x] Simple Bed
- - [ ] Crop plot
+ - [x] Crop plot
  - [x] Compost bin
  - [x] Seeds (Bushberry not implemented in the game ?)
  - [x] (Wooden and Stone) Dinos Gate
@@ -53,6 +58,8 @@ Items Database
  - [x] Tier 2 Vegetables (Rockarrot, Citronal, Savoroot)
  - [ ] Dino eggs
  - [x] Spyglass
+ - [ ] Flags
+ - [ ] Metal Wall Sign
 
 Features
 ===
