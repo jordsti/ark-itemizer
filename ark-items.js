@@ -3,7 +3,7 @@
 //
 // Data coming from : http://ark.gamepedia.com/
 // and http://www.arkchives.com/
-// all items and in the array "ark_items"
+// all items are in the array "ark_items"
 // Current items of Ark 184.0
 // each items contains these attributes
 //		name : Item Name

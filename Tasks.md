@@ -67,5 +67,9 @@ Items Database
 Features
 ===
  - [ ] Close popup when the distance when the mouse is far
- - [ ] View middle-man item in the column right of totals
+ - [ ] View middletier item in the column right of totals
  - [ ] More css..
+ - [ ] Put each examples in different HTML file
+ - [ ] Calculator : Copy mats total to clipboard
+ - [ ] Calculator : replace Select input by a writable div, and show matching item name
+ 

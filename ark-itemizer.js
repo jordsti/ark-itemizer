@@ -1,3 +1,16 @@
+//Main Code of ARK-Itemizer
+//Written by JordSti jord52@gmail.com
+//If you encouter a bugs and/or you want to make a suggestions
+//You can post an issue on GitHub project
+// at this page : https://github.com/jordsti/ark-itemizer/issues
+// else
+// you can send me an email
+// --------------------------------------------
+//	!WARNING!
+// --------------------------------------------
+// This is a Work in progress, so there will be bugs and some features aren't well implemented at the moment
+// If you an example how to use this javascript code, look at "index.html"
+
 var ark_popupRegistry = new Array();
 var ark_popupIterator = 0;
 var ark_popupDefaultLength = 25;
@@ -36,34 +49,93 @@ function arkInjectCalculator(containerId)
 {
 	var container = $('#'+containerId);
 	
-	var html = '<div class="ark-item-selector">';
+	//var html = '<div class="ark-item-selector">';
 	
-	html += '<label for="ark-item-selector-id">Item</label>';
-	html += '<select name="ark-item-selector-id" id="ark-item-selector-id">';
+	//html += '<label for="ark-item-selector-id">Item</label>';
+	//html += '<select name="ark-item-selector-id" id="ark-item-selector-id">';
 	
-	for(var i=0; i<ark_items.length; i++)
-	{
-		html += '<option value="'+ark_items[i].itemId+'">'+ark_items[i].name+'</option>';
-	}
+	//for(var i=0; i<ark_items.length; i++)
+	//{
+		//html += '<option value="'+ark_items[i].itemId+'">'+ark_items[i].name+'</option>';
+	//}
 	
-	html += '</select>';
+	//html += '</select>';
+	
+	var html = '<div id="ark-search-box">Item Name : <input type="text" id="ark-search-item-match" name="ark-search-item-match" onKeyUp="arkSearchItemKeyPress(event);" />';
+	
 	
 	html += '<input type="text" name="ark-calculator-quantity" id="ark-calculator-quantity" value="1" />';
-	
+	html += '<input type="hidden" name="ark-search-item-id" id="ark-search-item-id" value="0" />';
 	html += '<button onclick="arkCalculatorAddItem();">Add</button>';
-	html += '<h4>Items</h4>';
-	html += '<div id="ark-calculator-current-item">';
-	
 	html += '</div>';
+	html += '<div id="ark-search-item-matches"></div>';
+	html += '<h4>Items</h4>';
+	html += '<div id="ark-calculator-current-item"></div>';
+	
 	html += '<h4>Totals</h4>';
 	html += '<div id="ark-calculator-totals"></div>';
 	
 	html += '<button onclick="arkCalculatorClearItems();">Clear</button>';
-	html += '</div>';
+	//html += '</div>';
 	
 	container.append(html);
 	
 }
+
+function arkSearchItemKeyPress(evt)
+{
+
+	var resultsContainer = $('#ark-search-item-matches');
+	var searchInput = $('#ark-search-item-match');
+	var prefix = searchInput.val();
+	
+	resultsContainer.empty();
+	
+	if(prefix.length > 0)
+	{
+		resultsContainer.show();
+		resultsContainer.css('visibility', 'visible');
+		resultsContainer.css('position', 'absolute');
+		resultsContainer.css('top', searchInput.css('top') + searchInput.width());
+		
+		var results = arkSearchItemsByPrefix(prefix);
+		console.log(results);
+		
+		//publishing results
+		
+		for(var i=0; i<results.length; i++)
+		{
+			var item = results[i];
+			var ihtml = '<div class="ark-search-item-result"><a class="ark-js-link" onclick="arkSelectItem('+item.itemId+', \'ark-search-item-id\', \'ark-search-item-match\');"><img src="images/'+item.image+'" width="16" height="16" />'+item.name+'</a></div>';
+			
+			resultsContainer.append(ihtml);
+		}
+		
+		if(results.length == 0)
+		{
+			resultsContainer.hide();
+			resultsContainer.css('visibility', 'hidden');
+		}
+	
+	}
+
+}
+
+function arkSelectItem(itemId, inputId, textId)
+{
+	var item = arkGetItemById(itemId);
+	var resultsContainer = $('#ark-search-item-matches');
+	resultsContainer.hide();
+	resultsContainer.css('visibility', 'hidden');
+
+	if(item)
+	{
+
+		$('#'+inputId).val(itemId);
+		$('#'+textId).val(item.name);
+	}
+}
+
 
 function arkCalculatorClearItems()
 {
@@ -74,16 +146,19 @@ function arkCalculatorClearItems()
 function arkCalculatorAddItem()
 {
 	
-	var _itemId = $('#ark-item-selector-id').val();
-	var qty = parseInt($('#ark-calculator-quantity').val());
+	var _itemId = $('#ark-search-item-id').val();
+	if(_itemId != 0)
+	{
+		var qty = parseInt($('#ark-calculator-quantity').val());
 
-	var entry = {
-		"itemId": _itemId,
-		"count": qty,
-	};
+		var entry = {
+			"itemId": _itemId,
+			"count": qty,
+		};
 
-	ark_currentItemList.push(entry);
-	arkCalculatorRenderCurrentItem();
+		ark_currentItemList.push(entry);
+		arkCalculatorRenderCurrentItem();
+	}
 }
 
 function arkCalculatorRemoveItem(entryIndex)
@@ -115,9 +190,11 @@ function arkCalculatorRenderCurrentItem()
 		
 		if(item)
 		{
-			var html = '<div id="ark-calculator-entry-'+i+'">';
-			html += '<strong><a onmouseover="arkMouseOverPopup('+item.itemId+', \'ark-calculator-entry-'+i+'\');">' + item.name + '</a></strong>';
-			html += ' ' + ark_currentItemList[i].count;
+			var html = '<div class="ark-calculator-entry" id="ark-calculator-entry-'+i+'">';
+			html += '<div class="ark-calculator-item-name">';
+			html += '<a onmouseover="arkMouseOverPopup('+item.itemId+', \'ark-calculator-entry-'+i+'\');">' + item.name + '</a>';
+			html += ' x ' + ark_currentItemList[i].count;
+			html += '</div>';
 			html += '<button onclick="arkCalculatorRemoveItem('+i+');">Remove</button>';
 			html += '</div>';
 			
@@ -166,6 +243,23 @@ function arkSearchItems(itemSubString)
 		var itemName = ark_items[i].name.toLowerCase();
 		var index = itemName.indexOf(itemSubString.toLowerCase());
 		if(index != -1)
+		{
+			results.push(ark_items[i]);
+		}
+	}
+	
+	return results;
+}
+
+function arkSearchItemsByPrefix(itemSubString)
+{
+	var results = new Array();
+	
+	for(var i=0; i<ark_items.length; i++)
+	{
+		var itemName = ark_items[i].name.toLowerCase();
+		var index = itemName.indexOf(itemSubString.toLowerCase());
+		if(index == 0)
 		{
 			results.push(ark_items[i]);
 		}
