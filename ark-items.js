@@ -3083,7 +3083,7 @@ var ark_items = [
 		"recipe": [
 			{"itemId":10, "count":350},
 			{"itemId":76, "count":185},
-			{"itemId": 11, "itemId2": 217, "count":30}
+			{"itemId": 11, "itemId2": 217, "count":150}
 		],
 		"stats": [
 			{"id": 1, "value": "Saddle"},

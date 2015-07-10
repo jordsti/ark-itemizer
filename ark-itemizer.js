@@ -93,10 +93,17 @@ function arkSearchItemKeyPress(evt)
 	
 	if(prefix.length > 0)
 	{
+		//todo
+		//if prefix == item.name, just put that item id into the input
+		
 		resultsContainer.show();
 		resultsContainer.css('visibility', 'visible');
 		resultsContainer.css('position', 'absolute');
-		resultsContainer.css('top', searchInput.css('top') + searchInput.width());
+		
+		var offset = searchInput.offset();
+		
+		resultsContainer.css('top', (offset.top + searchInput.height()) - $(window).scrollTop());
+		resultsContainer.css('left', offset.left - $(window).scrollLeft());
 		
 		var results = arkSearchItemsByPrefix(prefix);
 		console.log(results);
@@ -117,6 +124,11 @@ function arkSearchItemKeyPress(evt)
 			resultsContainer.css('visibility', 'hidden');
 		}
 	
+	}
+	else
+	{
+		resultsContainer.hide();
+		resultsContainer.css('visibility', 'hidden');
 	}
 
 }
@@ -149,6 +161,7 @@ function arkCalculatorAddItem()
 	var _itemId = $('#ark-search-item-id').val();
 	if(_itemId != 0)
 	{
+		var exists = false;
 		var qty = parseInt($('#ark-calculator-quantity').val());
 
 		var entry = {
@@ -156,7 +169,22 @@ function arkCalculatorAddItem()
 			"count": qty,
 		};
 
-		ark_currentItemList.push(entry);
+		for(var i=0; i<ark_currentItemList.length; i++)
+		{
+			var costEntry = ark_currentItemList[i];
+			if(costEntry.itemId == _itemId)
+			{
+				costEntry.count += qty;
+				exists = true;
+				break;
+			}
+		}
+		
+		if(!exists)
+		{
+			ark_currentItemList.push(entry);
+		}
+		
 		arkCalculatorRenderCurrentItem();
 	}
 }

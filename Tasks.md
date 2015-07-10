@@ -38,7 +38,7 @@ Items Database
  - [x] Simple Bed
  - [x] Crop plot
  - [x] Compost bin
- - [x] Seeds (Bushberry not implemented in the game ?)
+ - [x] Seeds : Bushberry not implemented in the game
  - [x] (Wooden and Stone) Dinos Gate
  - [x] Metal Dino Gate
  - [x] Parachute
@@ -71,5 +71,6 @@ Features
  - [ ] More css..
  - [ ] Put each examples in different HTML file
  - [ ] Calculator : Copy mats total to clipboard
- - [ ] Calculator : replace Select input by a writable div, and show matching item name
+ - [x] Calculator : replace Select input by a writable div, and show matching item name
+ - [x] Calculator : If same items id, should merge
  
