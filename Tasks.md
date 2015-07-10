@@ -21,13 +21,13 @@ Items Database
  - [x] Blood Pack and Syringe
  - [x] Berries
  - [ ] Brews
- - [ ] Dyes
- - [ ] Feces
+ - [ ] Dyes (Coloring)
+ - [ ] Feces (small and human are there)
  - [x] Saddles
  - [x] Storage Box
  - [ ] Review Boxes HP
  - [x] Stone Irrigation
- - [ ] Metal Irrigation
+ - [x] Metal Irrigation
  - [x] Simple Bed
  - [ ] Crop plot
  - [x] Compost bin
@@ -35,7 +35,7 @@ Items Database
  - [x] (Wooden and Stone) Dinos Gate
  - [x] Metal Dino Gate
  - [x] Parachute
- - [ ] Electricals items
+ - [x] Electricals items (review weight)
  - [x] Gun accessories
  - [x] Prime meat
  - [x] Reinforced Wooden Door
@@ -52,7 +52,7 @@ Items Database
  - [ ] Gasoline spoils review
  - [x] Tier 2 Vegetables (Rockarrot, Citronal, Savoroot)
  - [ ] Dino eggs
-
+ - [x] Spyglass
 
 Features
 ===

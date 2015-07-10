@@ -2592,6 +2592,304 @@ var ark_items = [
 		]
 		},
 	{
+		"name": "Air Conditioner",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 188,
+		"description": "Requires electricity to run. Provides insulation from both the heat and the cold to an area.",
+		"image": "air_conditioner.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 74, "count": 80},
+			{"itemId": 165, "count": 15},
+			{"itemId": 166,"count": 5},
+			{"itemId": 78,"count": 15},
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 1000}
+		]
+		},
+	{
+		"name": "Electrical Generator",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 189,
+		"description": "A large machine that converts gasoline into electricity.",
+		"image": "electrical_generator.png",
+		"weight": 5.0,
+		"recipe": [
+			{"itemId": 74, "count": 25},
+			{"itemId": 165, "count": 10}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 1000}
+		]
+		},
+	{
+		"name": "Electrical Outlet",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 190,
+		"description": "An outlet for an electrical grid. When connected to a generator via cables, this provides power to all nearby devices that use electricity.",
+		"image": "electrical_outlet.png",
+		"weight": 7.5,
+		"recipe": [
+			{"itemId": 74, "count": 5},
+			{"itemId": 7, "count": 15},
+			{"itemId": 165, "count": 3}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 100}
+		]
+		},
+	{
+		"name": "Inclined Electrical Cable",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 191,
+		"description": "An inclined cable for transmitting electricity up and down hills.",
+		"image": "inclined_electrical_cable.png",
+		"weight": 2.0,
+		"recipe": [
+			{"itemId": 74, "count": 2},
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 100}
+		]
+		},
+	{
+		"name": "Electrical Cable Intersection",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 192,
+		"description": "A plus-shaped intersection for a power grid, used for splitting one power cable into three.",
+		"image": "electrical_cable_intersection.png",
+		"weight": 3.0,
+		"recipe": [
+			{"itemId": 74, "count": 2},
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 100}
+		]
+		},
+	{
+		"name": "Straight Electrical Cable",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 193,
+		"description": "A straight cable, used for transmitting electricity across land.",
+		"image": "straight_electrical_cable.png",
+		"weight": 1.0,
+		"recipe": [
+			{"itemId": 74, "count": 2},
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 100}
+		]
+		},
+	{
+		"name": "Vertical Electrical Cable",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 194,
+		"description": "An vertical cable for transmitting electricity up and down cliffs.",
+		"image": "vertical_electrical_cable.png",
+		"weight": 1.0,
+		"recipe": [
+			{"itemId": 74, "count": 2},
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 100}
+		]
+		},
+	{
+		"name": "Lamppost",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 195,
+		"description": "Requires electricity to activate. Lights an area without adding much heat.",
+		"image": "lamppost.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 74, "count": 5},
+			{"itemId": 78, "count": 10},
+			{"itemId": 165, "count": 2}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 500}
+		]
+		},
+	{
+		"name": "Refrigerator",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 196,
+		"description": "Requires electricity to run. Keeps perishables from spoiling for a long time.",
+		"image": "refrigerator.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 74, "count": 120},
+			{"itemId": 166, "count": 15},
+			{"itemId": 78, "count": 25},
+			{"itemId": 165, "count": 10}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 1000}
+		]
+		},
+	{
+		"name": "Auto Turret",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 197,
+		"description": "Requires electricity to run. Consumes bullets while firing. Can be configured to automatically attack hostiles within range.",
+		"image": "auto_turret.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 165, "count": 70},
+			{"itemId": 74, "count": 140},
+			{"itemId": 146, "count": 50},
+			{"itemId": 166, "count": 20},
+			
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 1000}
+		]
+		},
+	{
+		"name": "Remote Keypad",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 198,
+		"description": "Allows remote access to multiple doors and/or lights.",
+		"image": "remote_keypad.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 74, "count": 2},
+			{"itemId": 146, "count": 1},
+			{"itemId": 165, "count": 25},
+			
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 100}
+		]
+		},
+	{
+		"name": "Metal Irrigation Pipe - Inclined",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 199,
+		"description": "An inclined metal pipe for an irrigation network, used for transporting water up and down hills.",
+		"image": "metal_irrigation_pipe_inclined.png",
+		"weight": 2.0,
+		"recipe": [
+			{"itemId": 74, "count": 4},
+			{"itemId": 146,"count": 2},
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 100}
+		]
+		},
+	{
+		"name": "Metal Irrigation Pipe - Tap (Intake)",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 200,
+		"description": "The metal intake for an irrigation network that transports water over land.",
+		"image": "metal_irrigation_pipe_tap_intake.png",
+		"weight": 7.5,
+		"recipe": [
+			{"itemId": 74, "count": 15},
+			{"itemId": 146,"count": 5},
+			{"itemId": 7, "count": 10}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 100}
+		]
+		},
+	{
+		"name": "Metal Irrigation Pipe - Intersection",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 201,
+		"description": "A plus-shaped metal intersection for an irrigation network, used for splitting one water source into three.",
+		"image": "metal_irrigation_pipe_intersection.png",
+		"weight": 3.0,
+		"recipe": [
+			{"itemId": 74, "count": 6},
+			{"itemId": 146, "count": 3}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 100}
+		]
+		},
+	{
+		"name": "Metal Irrigation Pipe - Straight",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 202,
+		"description": "A straight metal pipe for an irrigation network, used for transporting water across land.",
+		"image": "metal_irrigation_pipe_straight.png",
+		"weight": 1.0,
+		"recipe": [
+			{"itemId": 74, "count": 2},
+			{"itemId": 146, "count": 1}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 100}
+		]
+		},
+	{
+		"name": "Metal Irrigation Pipe - Tap",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 203,
+		"description": "This Metal intake allows water in an irrigation network.",
+		"image": "metal_irrigation_pipe_tap.png",
+		"weight": 7.5,
+		"recipe": [
+			{"itemId": 74, "count": 10},
+			{"itemId": 146,"count": 4},
+			{"itemId": 7, "count": 15}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 100}
+		]
+		},
+	{
+		"name": "Metal Irrigation Pipe - Vertical",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 204,
+		"description": "A vertical metal pipe for an irrigation network, used for transporting water up and down cliffs.",
+		"image": "metal_irrigation_pipe_vertical.png",
+		"weight": 1.0,
+		"recipe": [
+			{"itemId": 74, "count": 2},
+			{"itemId": 146,"count": 1},
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 100}
+		]
+		},
+	{
 		"name": "Flashlight Attachment",
 		"maxStack": 1,
 		"decomposes": 120,
@@ -3231,6 +3529,24 @@ var ark_items = [
 		"stats": [
 			{"id": 1, "value": "Structure"},
 			{"id": 5, "value": 6250}
+		]
+		},
+	{
+		"name": "Spyglass",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 283,
+		"description": "This instrument, while primitive, is quite effective at long-range reconaissance.",
+		"image": "spyglass.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 7, "count": 5},
+			{"itemId": 10, "count": 10},
+			{"itemId": 76, "count": 10},
+			{"itemId": 78, "count": 2}
+		],
+		"stats": [
+			{"id": 1, "value": "Tool"},
 		]
 		},
 	{
