@@ -13,7 +13,7 @@ Items Database
  - [x] Metal Weapons (Pick, hatchet, Pike)
  - [ ] Review Metal hatchet durability
  - [x] Guns
- - [ ] Guns bullets (still miss shotgun shell)
+ - [x] Guns bullets
  - [x] Crafting station (Forge, Smithy, Fabricator)
  - [x] Flak Armor
  - [x] Explosives (C4, Grenade, Improvised, remote Detonator)
@@ -26,6 +26,8 @@ Items Database
  - [ ] Calien Soup (Review stats)
  - [ ] Fria Curry (Review stats)
  - [ ] Focal Chili (Review stats)
+ - [ ] Battle Tartate (Review stats)
+ - [ ] Shadow Steak Saute (Review stats)
  - [ ] Dyes (Coloring)
  - [ ] Feces (small and human are there)
  - [x] Saddles
@@ -48,7 +50,7 @@ Items Database
  - [x] Preserving bin
  - [ ] Meat Jerky
  - [x] Slingshot
- - [ ] Fence Foundation (Wooden is already there)
+ - [x] Fence Foundation (Wooden is already there)
  - [x] Cooking Pot
  - [ ] Wall Sign, Metal Wall Sign, Wooden Sign
  - [ ] Fertilizer
@@ -60,6 +62,7 @@ Items Database
  - [x] Spyglass
  - [ ] Flags
  - [ ] Metal Wall Sign
+ - [ ] Metal Water Tank
 
 Features
 ===

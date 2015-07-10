@@ -1,7 +1,10 @@
 //ARK Item Database
+//	maintained by Jord Sti <jord52@gmail.com>
+//
 // Data coming from : http://ark.gamepedia.com/
 // and http://www.arkchives.com/
 // all items and in the array "ark_items"
+// Current items of Ark 184.0
 // each items contains these attributes
 //		name : Item Name
 //		maxStack : Maximum item per stack
@@ -3623,6 +3626,32 @@ var ark_items = [
 		]
 		},
 	{
+		"name": "Rare Flower",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 250,
+		"description": "Even the smell of this flower makes you slightly angry.",
+		"image": "rare_flower.png",
+		"weight": 0.01,
+		"recipe": [],
+		"stats": [
+			{"id": 1, "value": "Resource"},
+		]
+		},
+	{
+		"name": "Rare Mushroom",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 251,
+		"description": "You feel lightheaded after just touching this. Ingesting it would be dangerous.",
+		"image": "rare_mushroom.png",
+		"weight": 0.01,
+		"recipe": [],
+		"stats": [
+			{"id": 1, "value": "Resource"},
+		]
+		},
+	{
 		"name": "Raw Prime Meat",
 		"maxStack": 1,
 		"decomposes": 120,
@@ -3654,6 +3683,48 @@ var ark_items = [
 			{"id": 7, "value": "+20"},
 			{"id": 8, "value": "+35"},
 			{"id": 9, "value": "45:00"}
+		]
+		},
+	{
+		"name": "Battle Tartare",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 254,
+		"description": "Only eat this dish when you intend to go into a brawl. It causes pain and stress to your body, but grants you almost supernatural strength, speed, and resilience. Warning: This concoction can be habit forming.",
+		"image": "battle_tartare.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId": 253, "count": 3},
+			{"itemId": 120, "count": 20},
+			{"itemId": 124, "count": 8},
+			{"itemId": 250, "count": 2},
+			{"itemId": 99, "count": 1},
+			{"itemId": 233, "count": 1},
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 9, "value": "5:00:00"}
+		]
+		},
+	{
+		"name": "Shadow Steak Saute",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 255,
+		"description": "This dish grants you clarity of the night. Consume it to see more light, ignore most weather, and strady your aim. Can be dangerous to use in daylight.",
+		"image": "shadow_steak_saute.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId": 253, "count": 3},
+			{"itemId": 120, "count": 20},
+			{"itemId": 123, "count": 8},
+			{"itemId": 251, "count": 2},
+			{"itemId": 232, "count": 1},
+			{"itemId": 234, "count": 1},
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 9, "value": "5:00:00"}
 		]
 		},
 	{
@@ -3816,6 +3887,24 @@ var ark_items = [
 		"stats": [
 			{"id": 1, "value": "Structure"},
 			{"id": 5, "value": 3500}
+		]
+		},
+	{
+		"name": "Bookshelf",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 309,
+		"description": "A large bookshelf to store Blueprints, Notes, and other small trinkets in.",
+		"image": "bookshelf.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 7,"count": 100},
+			{"itemId": 75,"count": 45},
+			{"itemId": 76,"count": 35}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 2000}
 		]
 		},
 	{

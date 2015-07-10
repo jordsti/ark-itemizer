@@ -116,7 +116,7 @@ function arkCalculatorRenderCurrentItem()
 		if(item)
 		{
 			var html = '<div id="ark-calculator-entry-'+i+'">';
-			html += '<strong>' + item.name + '</strong>';
+			html += '<strong><a onmouseover="arkMouseOverPopup('+item.itemId+', \'ark-calculator-entry-'+i+'\');">' + item.name + '</a></strong>';
 			html += ' ' + ark_currentItemList[i].count;
 			html += '<button onclick="arkCalculatorRemoveItem('+i+');">Remove</button>';
 			html += '</div>';
@@ -422,6 +422,8 @@ function arkNewPopup(arkItem)
 		item: arkItem,
 		tick: 0,
 		length: ark_popupDefaultLength,
+		middleX: 0,
+		middleY: 0,
 	};
 	
 	ark_popupRegistry.push(popup);
