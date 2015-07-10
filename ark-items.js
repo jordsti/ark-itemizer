@@ -37,7 +37,8 @@ var ark_itemStats = [
 	{"id": 10, "name": "Torpor"},
 	{"id": 11, "name": "Water"},
 	{"id": 12, "name": "Stamina"},
-	{"id": 13, "name": "Cooldown"}
+	{"id": 13, "name": "Cooldown"},
+	{"id": 14, "name": "Fertilizer Points"},
 ];
 
 var ark_items = [
@@ -843,7 +844,7 @@ var ark_items = [
 		"itemId": 47,
 		"description": "Goods to keep you hydrated, but slowly leaks water.",
 		"image": "waterskin.png",
-		"weight": 03,
+		"weight": 0.3,
 		"recipe": [
 			{"itemId":10, "count":4},
 			{"itemId":76, "count":12}
@@ -851,6 +852,108 @@ var ark_items = [
 		"stats": [
 			{"id": 1, "value": "Consumable"},
 			{"id": 11, "value": "100 or less"},
+		]
+		},
+	{
+		"name": "Bingleberry Soup",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 51,
+		"description": "Eat it to gain mega nourishment, long-term fortification!",
+		"image": "bingleberry_soup.png",
+		"weight": 0.1,
+		"recipe": [],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 8, "value": "+60"},
+		]
+		},
+	{
+		"name": "Medical Brew",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 52,
+		"description": "This brew doesn't have any nutritional value, but it promotes healing.",
+		"image": "medical_brew.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId": 119, "count": 20},
+			{"itemId": 123, "count": 2}
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 7, "value": "+40"},
+			{"id": 9, "value": "60:00"}
+		]
+		},
+	{
+		"name": "Energy Brew",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 53,
+		"description": "This brew doesn't have any nutritional value, but fills your stamina.",
+		"image": "energy_brew.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId": 118, "count": 20},
+			{"itemId": 124, "count": 2}
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 7, "value": "+40"},
+			{"id": 9, "value": "60:00"}
+		]
+		},
+	{
+		"name": "Small Dinosaur Feces",
+		"maxStack": 1,
+		"decomposes": 60,
+		"itemId": 54,
+		"description": "Everyone Poops. Can provide nitrogen to help crops grow in their plots. Would be more efficient fertilizer if combined with thatch in Compost Bin.",
+		"image": "small_dinosaur_feces.png",
+		"weight": 1.0,
+		"recipe": [
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 9, "value": "1:24:10"},
+			{"id": 14, "value": 2500}
+		]
+		},
+	{
+		"name": "Human Feces",
+		"maxStack": 1,
+		"decomposes": 60,
+		"itemId": 55,
+		"description": "Everyone poops. Can provide nitrogen to help crops grow in plots. Would be more efficient fertilizer if combined with thatch in a bin.",
+		"image": "human_feces.png",
+		"weight": 1.0,
+		"recipe": [
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 7, "value": "-70"},
+			{"id": 9, "value": "1:24:10"},
+			{"id": 14, "value": 1000}
+		]
+		},
+	{
+		"name": "Stegosaurus Egg",
+		"maxStack": 100,
+		"decomposes": 1000,
+		"itemId": 56,
+		"description": "Eat it to gain tremendous nourishment, or use it in recipes, or...",
+		"image": "stegosaurus_egg.png",
+		"weight": 12.0,
+		"recipe": [
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 7, "value": "+55"},
+			{"id": 12, "value": "+55"},
+			{"id": 8, "value": "+55"},
+			{"id": 9, "value": "2 days"},
+			{"id": 14, "value": 1000}
 		]
 		},
 	{
@@ -1502,7 +1605,7 @@ var ark_items = [
 		"image": "sparkpowder.png",
 		"weight": 1.0,
 		"recipe": [
-			{"itemId": 8, "count": 2},
+			{"itemId": 8, "count": 0.5},
 			{"itemId": 73, "count": 1}
 		],
 		"stats": []
@@ -1938,6 +2041,23 @@ var ark_items = [
 		]
 		},
 	{
+		"name": "Scope Attachment",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 138,
+		"description": "The carefully shaped crystal lenses in this scope grant the user a telescopic aim when firing. Attach this to a supporting weapon to gain more accurate aiming.",
+		"image": "scope_attachment.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId": 74, "count": 40},         
+			{"itemId": 78, "count": 10},
+			{"itemId": 8, "count": 5}
+		],
+		"stats": [
+			{"id": 1, "value": "Attachment"}
+		]
+		},
+	{
 		"name": "Slingshot",
 		"maxStack": 1,
 		"decomposes": 120,
@@ -2007,6 +2127,22 @@ var ark_items = [
 		]
 		},
 	{
+		"name": "Simple Rifle Ammo",
+		"maxStack": 50,
+		"decomposes": 120,
+		"itemId": 144,
+		"description": "An odd bullet and casing, used with forged rifles.",
+		"image": "simple_rifle_ammo.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId": 74, "count": 2},
+			{"itemId": 109, "count": 12}
+		],
+		"stats": [
+			{"id": 1, "value": "Ammunition"}
+		]
+		},
+	{
 		"name": "Cementing Paste",
 		"maxStack": 100,
 		"decomposes": 120,
@@ -2060,6 +2196,22 @@ var ark_items = [
 		"image": "silica_pearls.png",
 		"weight": 0.02,
 		"recipe": [],
+		"stats": [
+			{"id": 1, "value": "Resource"}
+		]
+		},
+	{
+		"name": "Gasoline",
+		"maxStack": 100,
+		"decomposes": -1,
+		"itemId": 164,
+		"description": "An advanced fuel. Can only be used in machines designed to consume it.",
+		"image": "gasoline.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId": 10, "count": 5},
+			{"itemId": 162, "count": 3}
+		],
 		"stats": [
 			{"id": 1, "value": "Resource"}
 		]
@@ -2367,8 +2519,27 @@ var ark_items = [
 		]
 		},
 	{
-		"name": "Fabricator",
+		"name": "Flare Gun",
 		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 184,
+		"description": "A single-use flare lancher. Fires a bright ball of Sparkpowder to temporarily light an area.",
+		"image": "flare_gun.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId": 7, "count": 4},
+			{"itemId": 76, "count": 2},
+			{"itemId": 108, "count": 10},
+			{"itemId": 109, "count": 2}
+		],
+		"stats": [
+			{"id": 1, "value": "Weapon"},
+			{"id": 6, "value": 0}
+		]
+		},
+	{
+		"name": "Fabricator",
+		"maxStack": 100,
 		"decomposes": 120,
 		"itemId": 185,
 		"description": "Place materials along with blueprints in this to create certain high-end machined items.",
@@ -2387,6 +2558,23 @@ var ark_items = [
 		]
 		},
 	{
+		"name": "Water Reservoir",
+		"maxStack": 100,
+		"decomposes": -1,
+		"itemId": 186,
+		"description": "A standing storage device for holding water. Automatically fills up during rain, can be filled up with the use of a water skin/jar.",
+		"image": "water_reservoir.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 8, "count": 30},
+			{"itemId": 146,"count": 5},
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 5000}
+		]
+		},
+	{
 		"name": "Parachute",
 		"maxStack": 20,
 		"decomposes": 120,
@@ -2401,6 +2589,41 @@ var ark_items = [
 		],
 		"stats": [
 			{"id": 1, "value": "Consumable"}
+		]
+		},
+	{
+		"name": "Flashlight Attachment",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 205,
+		"description": "Press N to activate.",
+		"image": "flashlight_attachment.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId": 74, "count": 40},
+			{"itemId": 78,"count": 40},
+			{"itemId": 165,"count": 10},
+		],
+		"stats": [
+			{"id": 1, "value": "Attachment"}
+		]
+		},
+	{
+		"name": "Silencer Attachment",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 206,
+		"description": "The lubricated materials in this silencer slow the gases released from a gunshot, muffling the sound. Attach this to a supporting weapon for reduced noise when firing.",
+		"image": "flashlight_attachment.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId": 74, "count": 50},
+			{"itemId": 162,"count": 5},
+			{"itemId": 217,"count": 20},
+			{"itemId": 10, "count": 10}
+		],
+		"stats": [
+			{"id": 1, "value": "Attachment"}
 		]
 		},
 	{
@@ -2578,6 +2801,189 @@ var ark_items = [
 		"stats": []
 		},
 	{
+		"name": "Holo-Scope Attachment",
+		"maxStack": 1,
+		"decomposes": -1,
+		"itemId": 219,
+		"description": "This advanced scope can tell friends from strangers. Attach this to a supporting weapon to gain more accurate aiming.",
+		"image": "holo_scope_attachment.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId": 74, "count": 40},
+			{"itemId": 78, "count": 40},
+			{"itemId": 165, "count": 30}
+		],
+		"stats": [
+			{"id": 1, "value": "Attachment"}
+		]
+		},
+	{
+		"name": "Laser Attachment",
+		"maxStack": 1,
+		"decomposes": -1,
+		"itemId": 220,
+		"description": "This advanced aiming device places a red dot where the weapon is pointed. Attach this to a supporting weapon to add a laser sight.",
+		"image": "laser_attachment.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId": 74, "count": 50},
+			{"itemId": 78, "count": 60},
+			{"itemId": 165, "count": 40}
+		],
+		"stats": [
+			{"id": 1, "value": "Attachment"}
+		]
+		},
+	{
+		"name": "Flak Leggings",
+		"maxStack": 1,
+		"decomposes": -1,
+		"itemId": 222,
+		"description": "Provides heavy physical protection, but makes the elements harder to endure.",
+		"image": "flak_leggings.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId": 74, "count": 16},
+			{"itemId": 10, "count": 12},
+			{"itemId": 76, "count": 5}
+		],
+		"stats": [
+			{"id": 1, "value": "Legs"},
+			{"id": 2, "value": 100},
+			{"id": 3, "value": 15},
+			{"id": 4, "value": -7}
+		]
+		},
+	{
+		"name": "Flak Chestpiece",
+		"maxStack": 1,
+		"decomposes": -1,
+		"itemId": 223,
+		"description": "Provides heavy physical protection, but makes the elements harder to endure.",
+		"image": "flak_chestpiece.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId": 74, "count": 10},
+			{"itemId": 10, "count": 10},
+			{"itemId": 76, "count": 4}
+		],
+		"stats": [
+			{"id": 1, "value": "Chest"},
+			{"id": 2, "value": 100},
+			{"id": 3, "value": 15},
+			{"id": 4, "value": -7}
+		]
+		},
+	{
+		"name": "Flak Helmet",
+		"maxStack": 1,
+		"decomposes": -1,
+		"itemId": 224,
+		"description": "Provides heavy physical protection, but makes the elements harder to endure.",
+		"image": "flak_helmet.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId": 74, "count": 10},
+			{"itemId": 10, "count": 7},
+			{"itemId": 76, "count": 3}
+		],
+		"stats": [
+			{"id": 1, "value": "Head"},
+			{"id": 2, "value": 100},
+			{"id": 3, "value": 10},
+			{"id": 4, "value": -3},
+		]
+		},
+	{
+		"name": "Flak Boots",
+		"maxStack": 1,
+		"decomposes": -1,
+		"itemId": 225,
+		"description": "Provides heavy physical protection, but makes the elements harder to endure.",
+		"image": "flak_boots.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId": 74, "count": 8},
+			{"itemId": 10, "count": 6},
+			{"itemId": 76, "count": 4}
+		],
+		"stats": [
+			{"id": 1, "value": "Feet"},
+			{"id": 2, "value": 100},
+			{"id": 3, "value": 10},
+			{"id": 4, "value": -4},
+		]
+		},
+	{
+		"name": "Flak Gauntlets",
+		"maxStack": 1,
+		"decomposes": -1,
+		"itemId": 226,
+		"description": "Provides heavy physical protection, but makes the elements harder to endure.",
+		"image": "flak_gauntlets.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId": 74, "count": 6},
+			{"itemId": 10, "count": 5},
+			{"itemId": 76, "count": 2}
+		],
+		"stats": [
+			{"id": 1, "value": "Hands"},
+			{"id": 2, "value": 100},
+			{"id": 3, "value": 10},
+			{"id": 4, "value": -4},
+		]
+		},
+	{
+		"name": "Savoroot",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 232,
+		"description": "This starchy tuber grows naturally in densely wooded areas. It is very hearty, but tastes better when cooked.",
+		"image": "savoroot.png",
+		"weight": 0.1,
+		"recipe": [],
+		"stats": [
+			{"id":1 , "value": "Consumable"},
+			{"id":8 , "value": "+20"},
+			{"id":11 , "value": "+10"},
+			{"id":9 , "value": "5:00"}
+		]
+		},
+	{
+		"name": "Longrass",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 233,
+		"description": "This grain plant grows best in open, fertile areas. It can be eaten by the cob but more clever chefs will think of other options.",
+		"image": "longrass.png",
+		"weight": 0.1,
+		"recipe": [],
+		"stats": [
+			{"id":1 , "value": "Consumable"},
+			{"id":7 , "value": "+0.5"},
+			{"id":8 , "value": "+20"},
+			{"id":11 , "value": "+17"},
+			{"id":9 , "value": "5:00"}
+		]
+		},
+	{
+		"name": "Rockarrot",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 234,
+		"description": "This root vegetable seems to thrive near mammals, and not dinosaurs. As such, it can be found mostly in the mountains.",
+		"image": "rockarrot.png",
+		"weight": 0.1,
+		"recipe": [],
+		"stats": [
+			{"id":1 , "value": "Consumable"},
+			{"id":8 , "value": "+20"},
+			{"id":11 , "value": "+10"},
+			{"id":9 , "value": "5:00"}
+		]
+		},
+	{
 		"name": "Azulberry Seed",
 		"maxStack": 100,
 		"decomposes": 120,
@@ -2687,6 +3093,76 @@ var ark_items = [
 		"stats": [
 			{"id":1 , "value": "Consumable"},
 			{"id":8 , "value": "+1"}
+		]
+		},
+	{
+		"name": "Fabricated Pistol",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 244,
+		"description": "This advanced pistol gains a high rate of fire and a large magazine size by sacrificing stopping power.",
+		"image": "fabricated_pistol.png",
+		"weight": 2.5,
+		"recipe": [
+			{"itemId": 166, "count": 35},
+			{"itemId": 74, "count": 20},
+			{"itemId": 146, "count": 30},
+		],
+		"stats": [
+			{"id":1 , "value": "Weapon"},
+			{"id":6 , "value": "18.6"},
+			{"id":5 , "value": 210}
+		]
+		},
+	{
+		"name": "Advanced Bullet",
+		"maxStack": 50,
+		"decomposes": 120,
+		"itemId": 245,
+		"description": "Primarily used with fabricated handguns.",
+		"image": "advanced_bullet.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId": 74, "count": 0.5},
+			{"itemId": 109, "count": 1.5},
+		],
+		"stats": [
+			{"id":1 , "value": "Ammunition"},
+		]
+		},
+	{
+		"name": "Advanced Rifle Bullet",
+		"maxStack": 50,
+		"decomposes": 120,
+		"itemId": 246,
+		"description": "Primarily used with fabricated rifles.",
+		"image": "advanced_rifle_bullet.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId": 74, "count": 1.5},
+			{"itemId": 109, "count": 4.5},
+		],
+		"stats": [
+			{"id":1 , "value": "Ammunition"},
+		]
+		},
+	{
+		"name": "Rocket Propelled Grenade",
+		"maxStack": 50,
+		"decomposes": 120,
+		"itemId": 247,
+		"description": "Primarily used with rocket launchers.",
+		"image": "rocket_propelled_grenade.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId": 109, "count": 30},
+			{"itemId": 78, "count": 5},
+			{"itemId": 146, "count": 20},
+			{"itemId": 166, "count": 10},
+			{"itemId": 74, "count": 12}
+		],
+		"stats": [
+			{"id":1 , "value": "Ammunition"},
 		]
 		},
 	{

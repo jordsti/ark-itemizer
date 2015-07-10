@@ -355,7 +355,7 @@ function arkFormatDecomposes(decomposes)
 	}
 	else
 	{
-		var min = decomposes / 60;
+		var min = Math.floor(decomposes / 60);
 		
 		var str = "";
 		
@@ -534,14 +534,23 @@ function arkShowItemPopup(item, containerId)
 		//find a way for conditionnal recipe mats (like chitin and keratin)
 		for(var i=0; i<item.recipe.length; i++)
 		{
-			if(item.recipe[i].itemId2)
+			var count = item.recipe[i].count;
+				
+			if(count == 0.5)
 			{
+				count = "1/2";
+			}
+			
+			html += count + ' x ';
+			
+			if(item.recipe[i].itemId2)
+			{	
 				//two ingredients possible
 				var ingItem = arkGetItemById(item.recipe[i].itemId);
 				var ingItem2 = arkGetItemById(item.recipe[i].itemId2);
 				if(ingItem && ingItem2)
 				{
-					html += item.recipe[i].count+' x <img src="images/'+ingItem.image+'" width="16" height="16" />'+ingItem.name+' or <img src="images/'+ingItem2.image+'" width="16" height="16" />'+ingItem2.name+'<br />';
+					html += '<img src="images/'+ingItem.image+'" width="16" height="16" />'+ingItem.name+' or <img src="images/'+ingItem2.image+'" width="16" height="16" />'+ingItem2.name+'<br />';
 				}
 			}
 			else
@@ -549,7 +558,7 @@ function arkShowItemPopup(item, containerId)
 				var ingItem = arkGetItemById(item.recipe[i].itemId);
 				if(ingItem)
 				{
-					html += item.recipe[i].count+' x <img src="images/'+ingItem.image+'" width="16" height="16" />'+ingItem.name+'<br />';
+					html += '<img src="images/'+ingItem.image+'" width="16" height="16" />'+ingItem.name+'<br />';
 				}
 			}
 			
