@@ -2263,7 +2263,7 @@ var ark_items = [
 		"image": "polymer.png",
 		"weight": 0.25,
 		"recipe": [
-			{"itemId": 140, "count": 2},
+			{"itemId": 142, "count": 2},
 			{"itemId": 146, "count": 2}
 		],
 		"stats": [

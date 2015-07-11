@@ -102,7 +102,7 @@ function arkSearchItemKeyPress(evt)
 		
 		var offset = searchInput.offset();
 		
-		resultsContainer.css('top', (offset.top + searchInput.height()) - $(window).scrollTop());
+		resultsContainer.css('top', (offset.top + searchInput.height()) - $(window).scrollTop() + 6);
 		resultsContainer.css('left', offset.left - $(window).scrollLeft());
 		
 		var results = arkSearchItemsByPrefix(prefix);
@@ -647,7 +647,7 @@ function arkShowItemPopup(item, containerId)
 	var htmlId = arkNewPopup(item);
 	var html = '<div class="ark-item-popup" id="ark-popup-'+htmlId+'">';
 		
-	html += '<div class="ark-item-name">'+item.name+'</div>';
+	html += '<div class="ark-item-name">'+item.name+'<div class="ark-item-id">ItemID: '+item.itemId+'</div></div>';
 	html += '<div class="ark-item-image"><img src="images/'+item.image+'"/></div>';
 	html += '<div class="ark-item-description">'+item.description+'</div>';
 	html += '<div class="ark-item-stats">';
