@@ -462,25 +462,6 @@ function arkShowItemPerId(itemId, containerId)
 
 function arkShowItemPerName(itemName, containerId)
 {
-	itemName = itemName.toLowerCase();
-	
-	for(var i=0; i<ark_items.length; i++)
-	{
-		var item = ark_items[i];
-		var iName = item.toLowerCase();
-		
-		if(iName == itemName)
-		{
-			return item;
-		}
-	}
-	
-	return null;
-	
-}
-
-function arkShowItemPerName(itemName, containerId)
-{
 	var item = null;
 	for(var i=0; i<ark_items.length; i++)
 	{
