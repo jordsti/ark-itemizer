@@ -13,7 +13,7 @@
 
 var ark_popupRegistry = new Array();
 var ark_popupIterator = 0;
-var ark_popupDefaultLength = 25;
+var ark_popupDefaultLength = 50;
 var ark_mouseX = 0;
 var ark_mouseY = 0;
 var ark_currentItemList = new Array();
@@ -72,8 +72,11 @@ function arkInjectCalculator(containerId)
 	html += '<h4>Items</h4>';
 	html += '<div id="ark-calculator-current-item"></div>';
 	
+	html += '<div class="ark-calculator-totals-container">';
 	html += '<h4>Totals</h4>';
 	html += '<div id="ark-calculator-totals"></div>';
+	
+	html += '</div>';
 	
 	html += '<button onclick="arkCalculatorClearItems();">Clear</button>';
 	//html += '</div>';
@@ -106,7 +109,6 @@ function arkSearchItemKeyPress(evt)
 		resultsContainer.css('left', offset.left - $(window).scrollLeft());
 		
 		var results = arkSearchItemsByPrefix(prefix);
-		console.log(results);
 		
 		//publishing results
 		
@@ -436,6 +438,7 @@ function arkCalculateCostForItems(items)
 		var _costs = arkCalculateItemCost(items[i].itemId, items[i].count);
 		costs = arkMergeCosts(costs, _costs);
 	}
+	
 	return costs;
 }
 
@@ -455,6 +458,25 @@ function arkShowItemPerId(itemId, containerId)
 	{
 		arkShowItemPopup(item, containerId);
 	}
+}
+
+function arkShowItemPerName(itemName, containerId)
+{
+	itemName = itemName.toLowerCase();
+	
+	for(var i=0; i<ark_items.length; i++)
+	{
+		var item = ark_items[i];
+		var iName = item.toLowerCase();
+		
+		if(iName == itemName)
+		{
+			return item;
+		}
+	}
+	
+	return null;
+	
 }
 
 function arkShowItemPerName(itemName, containerId)
@@ -560,7 +582,7 @@ function arkInit()
     ark_mouseY = e.pageY;
 	}).mouseover();
 	
-	console.log('ARK Items : '+arkGetArkItemsVersion());
+	//console.log('ARK Items : '+arkGetArkItemsVersion());
 	
 	setInterval(tickPopups, 100);
 }
@@ -594,7 +616,7 @@ function arkTestItemCosts()
 		}];
 	
 	var costs = arkCalculateCostForItems(itemCosts);
-	console.log(costs);
+
 	$('#item-costs').append(costs.length);
 	
 }
@@ -605,7 +627,7 @@ function arkClearPopups()
 	for(var i=0; i<ark_popupRegistry.length; i++)
 	{
 		arkCloseItemPopup(ark_popupRegistry[i].id);
-		console.log(ark_popupRegistry[i].id);
+
 	}
 	
 	ark_popupRegistry = new Array();
@@ -647,9 +669,16 @@ function arkShowItemPopup(item, containerId)
 	var htmlId = arkNewPopup(item);
 	var html = '<div class="ark-item-popup" id="ark-popup-'+htmlId+'">';
 		
-	html += '<div class="ark-item-name">'+item.name+'<div class="ark-item-id">ItemID: '+item.itemId+'</div></div>';
-	html += '<div class="ark-item-image"><img src="images/'+item.image+'"/></div>';
+	html += '<div class="ark-item-name">'+item.name+'<div class="ark-item-id">Item ID: '+item.itemId+'</div></div>';
+	
+	html += '<div class="ark-item-popup-head">';
+	
+	html += '<div class="ark-item-image-container"><img class="ark-item-image" src="images/'+item.image+'"/></div>';
 	html += '<div class="ark-item-description">'+item.description+'</div>';
+	
+	html += '</div>';
+	html += '<div class="ark-float-clear"></div>';
+	
 	html += '<div class="ark-item-stats">';
 	
 	html += '<strong>Weight: </strong>'+arkFormatWeight(item.weight)+'<br />';
@@ -685,7 +714,7 @@ function arkShowItemPopup(item, containerId)
 				count = "1/2";
 			}
 			
-			html += count + ' x ';
+			html += '<div class="ark-item-recipe-item">' + count + ' x ';
 			
 			if(item.recipe[i].itemId2)
 			{	
@@ -694,7 +723,7 @@ function arkShowItemPopup(item, containerId)
 				var ingItem2 = arkGetItemById(item.recipe[i].itemId2);
 				if(ingItem && ingItem2)
 				{
-					html += '<img src="images/'+ingItem.image+'" width="16" height="16" />'+ingItem.name+' or <img src="images/'+ingItem2.image+'" width="16" height="16" />'+ingItem2.name+'<br />';
+					html += '<img src="images/'+ingItem.image+'" class="ark-item-recipe-image" />'+ingItem.name+' or <img src="images/'+ingItem2.image+'" class="ark-item-recipe-image" />'+ingItem2.name+'</div>';
 				}
 			}
 			else
@@ -702,7 +731,7 @@ function arkShowItemPopup(item, containerId)
 				var ingItem = arkGetItemById(item.recipe[i].itemId);
 				if(ingItem)
 				{
-					html += '<img src="images/'+ingItem.image+'" width="16" height="16" />'+ingItem.name+'<br />';
+					html += '<img src="images/'+ingItem.image+'" class="ark-item-recipe-image" />'+ingItem.name+'</div>';
 				}
 			}
 			

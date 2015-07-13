@@ -28,7 +28,7 @@ Items Database
  - [ ] Focal Chili (Review stats)
  - [ ] Battle Tartate (Review stats)
  - [ ] Shadow Steak Saute (Review stats)
- - [ ] Dyes (Coloring)
+ - [x] Dyes (Is this cyan already in the game ?)
  - [ ] Feces (small and human are there)
  - [x] Saddles
  - [x] Storage Box

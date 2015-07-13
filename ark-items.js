@@ -21,10 +21,13 @@
 //		stats : list of item stat
 //			id : Stat ID
 //			value : Stat Value
+//
+// All right for item, including name, description, recipes, images belong to Wildcard Studio, developers of Ark: Survival Evolved
+//
 
 var ark_itemsVersion = {
 	itemizer: 0,
-	ark: {major: 184, minor: 0}
+	ark: {major: 185, minor: 0}
 };
 
 var ark_itemStats = [
@@ -962,7 +965,7 @@ var ark_items = [
 	{
 		"name": "Spear",
 		"maxStack": 1,
-		"decomposes": -1,
+		"decomposes": 120,
 		"itemId": 57,
 		"description": "An easily made melee weapon that can also be thrown. Has a chance to break when used.",
 		"image": "spear.png",
@@ -976,6 +979,155 @@ var ark_items = [
 			{"id": 1, "value": "Weapon"},
 			{"id": 5, "value": "None (randomly breaks on melee attack)"},
 			{"id": 6, "value": 30}
+		]
+		},
+	{
+		"name": "Red Coloring",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 58,
+		"description": "This substance can be used to color certain items and structures.",
+		"image": "red_coloring.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId":119, "count":3},
+			{"itemId":77, "count":0.4}
+		],
+		"stats": [
+			{"id": 1, "value": "Dye"},
+		]
+		},
+	{
+		"name": "Green Coloring",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 59,
+		"description": "This substance can be used to color certain items and structures.",
+		"image": "green_coloring.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId":118, "count":1.8},
+			{"itemId":117, "count":1.8},
+			{"itemId":77, "count":0.4}
+		],
+		"stats": [
+			{"id": 1, "value": "Dye"},
+		]
+		},
+	{
+		"name": "Blue Coloring",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 60,
+		"description": "This substance can be used to color certain items and structures.",
+		"image": "blue_coloring.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId":118, "count":3},
+			{"itemId":77, "count":0.4}
+		],
+		"stats": [
+			{"id": 1, "value": "Dye"},
+		]
+		},
+	{
+		"name": "Yellow Coloring",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 61,
+		"description": "This substance can be used to color certain items and structures.",
+		"image": "yellow_coloring.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId":117, "count":3},
+			{"itemId":77, "count":0.4}
+		],
+		"stats": [
+			{"id": 1, "value": "Dye"},
+		]
+		},
+	{
+		"name": "Purple Coloring",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 62,
+		"description": "This substance can be used to color certain items and structures.",
+		"image": "purple_coloring.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId":118, "count":1.8},
+			{"itemId":119, "count":1.8},
+			{"itemId":77, "count":0.4}
+		],
+		"stats": [
+			{"id": 1, "value": "Dye"},
+		]
+		},
+	{
+		"name": "Orange Coloring",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 63,
+		"description": "This substance can be used to color certain items and structures.",
+		"image": "orange_coloring.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId":117, "count":1.8},
+			{"itemId":119, "count":1.8},
+			{"itemId":77, "count":0.4}
+		],
+		"stats": [
+			{"id": 1, "value": "Dye"},
+		]
+		},
+	{
+		"name": "Black Coloring",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 64,
+		"description": "This substance can be used to color certain items and structures.",
+		"image": "black_coloring.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId":121, "count":3},
+			{"itemId":77, "count":0.4}
+		],
+		"stats": [
+			{"id": 1, "value": "Dye"},
+		]
+		},
+	{
+		"name": "White Coloring",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 65,
+		"description": "This substance can be used to color certain items and structures.",
+		"image": "white_coloring.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId":122, "count":3},
+			{"itemId":77, "count":0.4}
+		],
+		"stats": [
+			{"id": 1, "value": "Dye"},
+		]
+		},
+	{
+		"name": "Brown Coloring",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 66,
+		"description": "This substance can be used to color certain items and structures.",
+		"image": "brown_coloring.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId":118, "count":0.6},
+			{"itemId":119, "count":1.8},
+			{"itemId":117, "count":1.2},
+			{"itemId":77, "count":0.4}
+		],
+		"stats": [
+			{"id": 1, "value": "Dye"},
 		]
 		},
 	{
@@ -1993,6 +2145,24 @@ var ark_items = [
 		"stats": [
 			{"id": 1, "value": "Saddle"},
 			{"id": 2, "value": 50},
+		]
+		},
+	{
+		"name": "Longneck Rifle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 132,
+		"description": "This simple single-shot rifle is higly accurate, but has a long reload time.",
+		"image": "longneck_rifle.png",
+		"weight": 15.0,
+		"recipe": [
+			{"itemId":74, "count":95},
+			{"itemId":7, "count":20},
+			{"itemId":10, "count":25}
+		],
+		"stats": [
+			{"id": 1, "value": "Weapon"},
+			{"id": 6, "value": 124.8},
 		]
 		},
 	{

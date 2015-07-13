@@ -6,25 +6,18 @@
 	<body onload="arkInit();">
 		
 		<div id="ark-itemizer">
+			<h4>ARK-Itemizer</h4>
+			<p>The goal of this Javascript library is to give a simple way to show ARK: Survival Evolved Item Description, with recipe, iamge and stats.</p>
+			<p>This page act as a Example code of how you can include Item popup into your website.</p>
+			<p>First of all, you must call the function <strong>arkInit()</strong> durign the <strong>onload</strong> event.</p>
 			<ul>
-				<li><a href="calculator.html">Calculator</a></li>
+				<li><a href="calculator.html">Calculator Example</a></li>
 			</ul>
 		</div>
 		
-		<div id="test_zone">
-			<input type="text" name="test_item_id" id="test_item_id" placeholder="Item ID" /><br />
-			<p><a class="ark-js-link" onclick="arkTestItem('test_zone');">Test</a></p>
-		</div>
-		<a class="ark-js-link" onclick="arkShowItemList('item_list');">Show Items list</a>
-		<div id="item_list">
-			
-		</div>
-		<a class="ark-js-link" onclick="arkShowItemStats('stat_list');">Show Item stats</a>
-		<div id="stat_list">
-		
-		</div>
 		
 		<div id="search-box">
+			<h4>Search Example</h4>
 			<div id="search-form">
 				<input type="text" name="ark-search-name" id="ark-search-name" placeholder="Item name" />
 				<a class="ark-js-link" onclick="arkLaunchSearch('search-result');">Search</a>
@@ -36,13 +29,14 @@
 		
 		
 		<div id="item-hotlink">
-			Item hotlink : <a onmouseover="arkMouseOverPopup(43, 'item-hotlink');">C4 Charge</a>
+			<h4>Item hotlink Example</h4>
+			<p>Item link with mouse over popup to see the Item information</p>
+			<a onmouseover="arkMouseOverPopup(43, 'item-hotlink');">C4 Charge with Item ID</a>
 		</div>
 		
 		
 		<script src="jquery-2.1.4.js"></script>
 		<script src="ark-items.js"></script>
 		<script src="ark-itemizer.js"></script>
-		<script>arkInjectCalculator('ark-calculator');</script>
 	</body>
 </html>
