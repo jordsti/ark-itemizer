@@ -620,15 +620,6 @@ function arkMouseOverPopup(itemId, containerId)
 	
 	var item = arkGetItemById(itemId);
 	
-	//for(var i=0; i<ark_popupRegistry.length; i++)
-	//{
-	//	var popup = ark_popupRegistry[i];
-	//	if(popup.active && popup.item == item)
-	//	{
-	//		popupExists = true;
-	//	}
-	//}
-	
 	arkClearPopups();
 	
 	if(item)
@@ -644,13 +635,42 @@ function arkMouseOverPopup(itemId, containerId)
 	
 }
 
+function arkMouseOverPopupByName(itemName, containerId)
+{
+	var item = null;
+	itemName = itemName.toLowerCase();
+	for(var i=0; i<ark_items.length; i++)
+	{
+		var iName = ark_items[i].name.toLowerCase();
+		
+		if(iName == itemName)
+		{
+			item = ark_items[i];
+			break;
+		}
+	}
+	
+	arkClearPopups();
+	
+	if(item)
+	{
+		var htmlId = arkShowItemPopup(item, containerId);
+		
+		$('#ark-popup-'+htmlId).css('position','fixed');
+		$('#ark-popup-'+htmlId).css('z-index', 1);
+		$('#ark-popup-'+htmlId).css('top',ark_mouseY+'px');
+		$('#ark-popup-'+htmlId).css('left',ark_mouseX+'px');
+	}
+}
+
+
 function arkShowItemPopup(item, containerId)
 {
 	
 	var htmlId = arkNewPopup(item);
 	var html = '<div class="ark-item-popup" id="ark-popup-'+htmlId+'">';
 		
-	html += '<div class="ark-item-name">'+item.name+'<div class="ark-item-id">Item ID: '+item.itemId+'</div></div>';
+	html += '<div class="ark-item-name">'+item.name+'<div class="ark-item-id">Item ID: '+item.itemId+' <a class="ark-close-popup-link" onclick="arkCloseItemPopup('+htmlId+');">X</a></div></div>';
 	
 	html += '<div class="ark-item-popup-head">';
 	

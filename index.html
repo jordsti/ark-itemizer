@@ -31,7 +31,11 @@
 		<div id="item-hotlink">
 			<h4>Item hotlink Example</h4>
 			<p>Item link with mouse over popup to see the Item information</p>
-			<a onmouseover="arkMouseOverPopup(43, 'item-hotlink');">C4 Charge with Item ID</a>
+			<a class="ark-js-link" onmouseover="arkMouseOverPopup(43, 'item-hotlink');">C4 Charge with Item ID</a>
+			
+			<p>Item hotlink using the Item Name instead of the Item Id</p>
+			<a class="ark-js-link" onmouseover="arkMouseOverPopupByName('Wooden Wall', 'item-hotlink');">Wooden Wall Hotlink</a>
+			
 		</div>
 		
 		

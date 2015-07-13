@@ -73,4 +73,5 @@ Features
  - [ ] Calculator : Copy mats total to clipboard
  - [x] Calculator : replace Select input by a writable div, and show matching item name
  - [x] Calculator : If same items id, should merge
+ - [x] Item Popup : Add a "X" symbol into the right upper corner to close the popup
  
