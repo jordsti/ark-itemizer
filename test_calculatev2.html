@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>ARK Itemizer Test</title>
+		<link href="ark-itemizer.css" rel="stylesheet">
+	</head>
+	<body onload="arkInit();">
+		
+		<div id="ark-output"></div>
+		
+		<script src="jquery-2.1.4.js"></script>
+		<script src="ark-items.js"></script>
+		<script src="ark-itemizer.js"></script>
+		
+		<script>
+			var itemTest = {
+				"itemId": 6,
+				"count": 1
+				};
+				
+				var trace = arkCalculateCostWithMiddleTier(itemTest, 0);
+				
+				arkCalculatorShowItemTrace(trace, 'ark-output');
+				//console.log(trace);
+				var costs = arkRawItemTraceCosts(trace);
+				console.log(costs);
+		</script>
+	</body>
+</html>

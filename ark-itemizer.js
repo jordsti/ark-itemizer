@@ -1,7 +1,7 @@
-//Main Code of ARK-Itemizer
-//Written by JordSti jord52@gmail.com
-//If you encouter a bugs and/or you want to make a suggestions
-//You can post an issue on GitHub project
+// ARK-Itemizer
+// Written by JordSti jord52@gmail.com
+// If you encouter a bugs and/or you want to make a suggestions
+// You can post an issue on GitHub project
 // at this page : https://github.com/jordsti/ark-itemizer/issues
 // else
 // you can send me an email
@@ -9,7 +9,7 @@
 //	!WARNING!
 // --------------------------------------------
 // This is a Work in progress, so there will be bugs and some features aren't well implemented at the moment
-// If you an example how to use this javascript code, look at "index.html"
+// If you want an example to know how to use this javascript code, look at "index.html"
 
 var ark_popupRegistry = new Array();
 var ark_popupIterator = 0;
@@ -752,4 +752,169 @@ function arkShowItemPopup(item, containerId)
 function arkCloseItemPopup(popupId)
 {
 	$('#ark-popup-'+popupId).remove();
+}
+
+
+function arkCalculateCostWithMiddleTier(itemCount, currentLevel)
+{
+
+	var _item = arkGetItemById(itemCount.itemId);
+	var itemTrace = null;
+	if(_item)
+	{
+		itemTrace = {
+				//todo
+				item: _item,
+				count: itemCount.count, 
+				inners: new Array(),
+				level: currentLevel,
+			};
+			
+		if(_item.recipe.length == 0)
+		{
+			return itemTrace;
+		}
+		else
+		{
+			for(var j=0; j<_item.recipe.length; j++)
+			{
+				var itemRecipe = _item.recipe[j];
+				var _itemCount = {
+					"itemId": itemRecipe.itemId,
+					"count": itemRecipe.count * itemCount.count,
+					};
+					
+				innerTrace = arkCalculateCostWithMiddleTier(_itemCount, currentLevel + 1);
+
+				itemTrace.inners.push(innerTrace);
+				
+				
+			}
+		}
+	}
+	
+	return itemTrace;
+}
+
+function arkCalculateItemsTrace(itemsCount)
+{
+	var traces = new Array();
+	
+	for(var i=0; i<itemsCount.length; i++)
+	{
+		var itemCount = itemsCount[i];
+		var trace = arkCalculateCostWithMiddleTier(itemCount, 0);
+		traces.push(trace);
+	}
+	
+	return traces;
+}
+
+function arkRawItemTracesCosts(traces)
+{
+	var costs = new Array();
+	
+	for(var i=0; i<traces.length; i++)
+	{
+		var trace = traces[i];
+		
+		var _costs = arkRawItemTraceCosts(trace);
+		
+		for(var j=0; j<_costs.length; j++)
+		{
+			var exists = false;
+			
+			for(var k=0; k<costs.length; k++)
+			{
+				if(costs[k].itemId == _costs[j].itemId)
+				{
+					costs[k].count += _costs[j].count;
+					exists = true;
+					break;
+				}
+			}
+			
+			if(!exists)
+			{
+				costs.push(_costs[j]);
+			}
+		}
+		
+	}
+	
+	return costs;
+}
+
+function arkRenderItemTraceHTML(itemTrace)
+{
+	var html = '<div class="ark-calculator-level-'+itemTrace.level+' ark-item-trace">';
+	
+	html += itemTrace.item.name + ' ' + itemTrace.count;
+	
+	for(var i=0; i<itemTrace.inners.length; i++)
+	{
+		var _inner = itemTrace.inners[i];
+		
+		html += arkRenderItemTraceHTML(_inner);
+	}
+	
+	html += '</div>';
+	
+	return html;
+}
+
+function arkCalculatorShowItemTrace(itemTrace, containerId)
+{
+	var container = $('#'+containerId);
+	var html = '<div class="ark-calculator-top-level">';
+	
+	html += arkRenderItemTraceHTML(itemTrace);
+	
+	html += '</div>';
+	container.empty();
+	container.append(html);
+}
+
+function arkRawItemTraceCosts(itemTrace)
+{
+	var costs = new Array();
+	
+	if(itemTrace.inners.length == 0)
+	{
+		costs.push({"itemId": itemTrace.item.itemId, "count": itemTrace.count});
+		return costs;
+	}
+	else
+	{
+		for(var i=0; i<itemTrace.inners.length; i++)
+		{
+			var _inner = itemTrace.inners[i];
+			var innerCosts = arkRawItemTraceCosts(_inner);
+			
+			//merging costs
+			for(var j=0; j<innerCosts.length; j++)
+			{
+				var _cost = innerCosts[j];
+				var exists = false;
+				
+				for(var k=0; k<costs.length; k++)
+				{
+					if(costs[k].itemId == _cost.itemId)
+					{
+						costs[k].count += _cost.count;
+						exists = true;
+						break;
+					}
+				}
+				
+				if(!exists)
+				{
+					costs.push(_cost);
+				}
+			}
+			
+		}
+	}
+	
+	return costs;
 }

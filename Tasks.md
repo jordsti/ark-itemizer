@@ -63,6 +63,7 @@ Items Database
  - [ ] Flags
  - [ ] Metal Wall Sign
  - [ ] Metal Water Tank
+ - [ ] 186.0 Items (http://ark.gamepedia.com/Entity_IDs) *eggs must be added before
 
 Features
 ===

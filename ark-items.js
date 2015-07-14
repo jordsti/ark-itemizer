@@ -3967,6 +3967,112 @@ var ark_items = [
 		]
 		},
 	{
+		"name": "Brontosaurus Egg",
+		"maxStack": 100,
+		"decomposes": 1000,
+		"itemId": 288,
+		"description": "Eat it to gain tremendous nourishment, or use it in recipes, or...",
+		"image": "brontosaurus_egg.jpg",
+		"weight": 20.0,
+		"recipe": [
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 7, "value": "+100"},
+			{"id": 8, "value": "+100"},
+			{"id": 12, "value": "+100"},
+			{"id": 9, "value": "2 days"}
+		]
+		},
+	{
+		"name": "Parasaur Egg",
+		"maxStack": 100,
+		"decomposes": 1000,
+		"itemId": 289,
+		"description": "Eat it to gain tremendous nourishment, or use it in recipes, or...",
+		"image": "parasaur_egg.png",
+		"weight": 4.0,
+		"recipe": [
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 7, "value": "+25"},
+			{"id": 8, "value": "+25"},
+			{"id": 12, "value": "+25"},
+			{"id": 9, "value": "2 days"}
+		]
+		},
+	{
+		"name": "Raptor Egg",
+		"maxStack": 100,
+		"decomposes": 1000,
+		"itemId": 290,
+		"description": "Eat it to gain tremendous nourishment, or use it in recipes, or...",
+		"image": "raptor_egg.png",
+		"weight": 7.0,
+		"recipe": [
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 7, "value": "+35"},
+			{"id": 8, "value": "+35"},
+			{"id": 12, "value": "+35"},
+			{"id": 9, "value": "2 days"}
+		]
+		},
+	{
+		"name": "T-Rex Egg",
+		"maxStack": 100,
+		"decomposes": 1000,
+		"itemId": 291,
+		"description": "Eat it to gain tremendous nourishment, or use it in recipes, or...",
+		"image": "t_rex_egg.png",
+		"weight": 15.0,
+		"recipe": [
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 7, "value": "+80"},
+			{"id": 8, "value": "+80"},
+			{"id": 12, "value": "+80"},
+			{"id": 9, "value": "2 days"}
+		]
+		},
+	{
+		"name": "Triceratops Egg",
+		"maxStack": 100,
+		"decomposes": 1000,
+		"itemId": 292,
+		"description": "Eat it to gain tremendous nourishment, or use it in recipes, or...",
+		"image": "triceratops_egg.png",
+		"weight": 9.0,
+		"recipe": [
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 8, "value": "+45"},
+			{"id": 9, "value": "2 days"}
+		]
+		},
+	{
+		"name": "Dodo Egg",
+		"maxStack": 100,
+		"decomposes": 1000,
+		"itemId": 294,
+		"description": "Eat it to gain tremendous nourishment, or use it in recipes, or...",
+		"image": "dodo_egg.png",
+		"weight": 3.0,
+		"recipe": [
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 7, "value": "+20"},
+			{"id": 8, "value": "+20"},
+			{"id": 12, "value": "+20"},
+			{"id": 9, "value": "2 days"}
+		]
+		},
+	{
 		"name": "Preserving Bin",
 		"maxStack": 100,
 		"decomposes": 120,
