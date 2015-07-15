@@ -27,7 +27,7 @@
 
 var ark_itemsVersion = {
 	itemizer: 0,
-	ark: {major: 185, minor: 0}
+	ark: {major: 186, minor: 0}
 };
 
 var ark_itemStats = [
@@ -4399,6 +4399,45 @@ var ark_items = [
 		"stats": [
 			{"id": 1, "value": "Structure"},
 			{"id": 5, "value": 10000}
+		]
+		},
+	{
+		"name": "Tripwire Alarm Trap",
+		"maxStack": 10,
+		"decomposes": 120,
+		"itemId": 326,
+		"description": "Place two of these ear each other to create an alarm trap.",
+		"image": "tripwire_alarm_trap.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId": 9,"count": 3},
+			{"itemId": 7,"count": 5},
+			{"itemId": 76,"count": 30},
+			{"itemId": 10,"count": 6},
+			{"itemId": 162,"count": 2}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 100}
+		]
+		},
+	{
+		"name": "Industrial Grill",
+		"maxStack": 4,
+		"decomposes": 120,
+		"itemId": 360,
+		"description": "Perfect for cooking meat in bulk, staying warm, and providing light. Powered by gasoline.",
+		"image": "industrial_grill.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 74,"count": 200},
+			{"itemId": 78, "count": 30},
+			{"itemId": 146, "count": 40},
+			{"itemId": 162, "count": 40}
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 2000}
 		]
 		},
 ]
