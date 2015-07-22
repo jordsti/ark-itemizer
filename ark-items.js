@@ -4422,12 +4422,156 @@ var ark_items = [
 		]
 		},
 	{
-		"name": "Industrial Grill",
+		"name": "Carno Egg",
+		"maxStack": 100,
+		"decomposes": 1800,
+		"itemId": 348,
+		"description": "Eat it to gain tremendous nourishment, or use it in recipes, or...",
+		"image": "carno_egg.png",
+		"weight": 12.0,
+		"recipe": [
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 7, "value": "+55"},
+			{"id": 8, "value": "+55"},
+			{"id": 12, "value": "+55"},
+			{"id": 9, "value": "8 days"}
+		]
+		},
+	{
+		"name": "Dilo Egg",
+		"maxStack": 100,
+		"decomposes": 1800,
+		"itemId": 349,
+		"description": "Eat it to gain tremendous nourishment, or use it in recipes, or...",
+		"image": "dilo_egg.png",
+		"weight": 3.0,
+		"recipe": [
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 7, "value": "+20"},
+			{"id": 8, "value": "+20"},
+			{"id": 12, "value": "+20"},
+			{"id": 9, "value": "8 days"}
+		]
+		},
+	{
+		"name": "Pteranodon Egg",
+		"maxStack": 100,
+		"decomposes": 1800,
+		"itemId": 350,
+		"description": "Eat it to gain tremendous nourishment, or use it in recipes, or...",
+		"image": "pteranodon_egg.png",
+		"weight": 7.0,
+		"recipe": [
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 7, "value": "+35"},
+			{"id": 8, "value": "+35"},
+			{"id": 12, "value": "+35"},
+			{"id": 9, "value": "8 days"}
+		]
+		},
+	{
+		"name": "Sarco Egg",
+		"maxStack": 100,
+		"decomposes": 1800,
+		"itemId": 351,
+		"description": "Eat it to gain tremendous nourishment, or use it in recipes, or...",
+		"image": "sarco_egg.png",
+		"weight": 15.0,
+		"recipe": [
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 7, "value": "+80"},
+			{"id": 8, "value": "+80"},
+			{"id": 12, "value": "+80"},
+			{"id": 9, "value": "8 days"}
+		]
+		},
+	{
+		"name": "Pulminoscorpius Egg",
+		"maxStack": 100,
+		"decomposes": 1800,
+		"itemId": 352,
+		"description": "Eat it to gain tremendous nourishment, or use it in recipes, or...",
+		"image": "pulminoscorpius_egg.png",
+		"weight": 9.0,
+		"recipe": [
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 7, "value": "+45"},
+			{"id": 8, "value": "+45"},
+			{"id": 12, "value": "+45"},
+			{"id": 9, "value": "8 days"}
+		]
+		},
+	{
+		"name": "Araneo Egg",
+		"maxStack": 100,
+		"decomposes": 1800,
+		"itemId": 353,
+		"description": "Eat it to gain tremendous nourishment, or use it in recipes, or...",
+		"image": "araneo_egg.png",
+		"weight": 9.0,
+		"recipe": [
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 7, "value": "+45"},
+			{"id": 8, "value": "+45"},
+			{"id": 12, "value": "+45"},
+			{"id": 9, "value": "8 days"}
+		]
+		},
+	{
+		"name": "Spino Egg",
+		"maxStack": 100,
+		"decomposes": 1800,
+		"itemId": 354,
+		"description": "Eat it to gain tremendous nourishment, or use it in recipes, or...",
+		"image": "spino_egg.png",
+		"weight": 12.0,
+		"recipe": [
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 7, "value": "+55"},
+			{"id": 8, "value": "+55"},
+			{"id": 12, "value": "+55"},
+			{"id": 9, "value": "8 days"}
+		]
+		},
+	{
+		"name": "Turtle Egg",
+		"maxStack": 100,
+		"decomposes": 1800,
+		"itemId": 355,
+		"description": "Eat it to gain tremendous nourishment, or use it in recipes, or...",
+		"image": "turtle_egg.png",
+		"weight": 3.0,
+		"recipe": [
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 7, "value": "+20"},
+			{"id": 8, "value": "+20"},
+			{"id": 12, "value": "+20"},
+			{"id": 9, "value": "8 days"}
+		]
+		},
+	{
+		"name": "Omnidirectional Lamppost",
 		"maxStack": 4,
 		"decomposes": 120,
-		"itemId": 360,
-		"description": "Perfect for cooking meat in bulk, staying warm, and providing light. Powered by gasoline.",
-		"image": "industrial_grill.png",
+		"itemId": 359,
+		"description": "Requires electricity to activate. Lights a large area without adding much heat.",
+		"image": "omnidirectional_lamppost.png",
 		"weight": 4.0,
 		"recipe": [
 			{"itemId": 74,"count": 200},
@@ -4438,6 +4582,60 @@ var ark_items = [
 		"stats": [
 			{"id": 1, "value": "Structure"},
 			{"id": 5, "value": 2000}
+		]
+		},
+	{
+		"name": "Industrial Grill",
+		"maxStack": 4,
+		"decomposes": 120,
+		"itemId": 360,
+		"description": "Perfect for cooking meat in bulk, staying warm, and providing light. Powered by gasoline.",
+		"image": "industrial_grill.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId": 74,"count": 4},
+			{"itemId": 78, "count": 10},
+			{"itemId": 165, "count": 2},
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 500}
+		]
+		},
+	{
+		"name": "Pump-Action Shotgun",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 361,
+		"description": "Powerful up close, but less reliable with range. Can fire multiple times before reloading.",
+		"image": "pump_action_shotgun.png",
+		"weight": 15.0,
+		"recipe": [
+			{"itemId":74, "count":30},
+			{"itemId":166, "count":55},
+			{"itemId":146, "count":45}
+		],
+		"stats": [
+			{"id": 1, "value": "Weapon"},
+			{"id": 6, "value": 380},
+		]
+		},
+	{
+		"name": "Crossbow",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 362,
+		"description": "Has significantly more power than the Bow, but cannot fire rapidly. Can fire underwater.",
+		"image": "crossbow.png",
+		"weight": 8.0,
+		"recipe": [
+			{"itemId":74, "count":7},
+			{"itemId":7, "count":10},
+			{"itemId":76, "count":35}
+		],
+		"stats": [
+			{"id": 1, "value": "Weapon"},
+			{"id": 6, "value": 95},
 		]
 		},
 ]

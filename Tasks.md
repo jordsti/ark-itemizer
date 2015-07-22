@@ -58,12 +58,15 @@ Items Database
  - [ ] Review feces fertilizer points (minus health too)
  - [ ] Gasoline spoils review
  - [x] Tier 2 Vegetables (Rockarrot, Citronal, Savoroot)
- - [ ] Dino eggs
  - [x] Spyglass
  - [ ] Flags
  - [ ] Metal Wall Sign
  - [ ] Metal Water Tank
- - [ ] 186.0 Items (http://ark.gamepedia.com/Entity_IDs) *eggs must be added before
+ - [ ] 186.0 Items (http://ark.gamepedia.com/Entity_IDs)
+ - [x] Pump-Action Shotgun
+ - [x] Eggs
+ - [ ] Kibbles
+ - [ ] New Dyes (itemId : 363 to 370)
 
 Features
 ===
