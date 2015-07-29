@@ -27,7 +27,7 @@
 
 var ark_itemsVersion = {
 	itemizer: 0,
-	ark: {major: 186, minor: 0}
+	ark: {major: 189, minor: 0}
 };
 
 var ark_itemStats = [
@@ -4636,6 +4636,44 @@ var ark_items = [
 		"stats": [
 			{"id": 1, "value": "Weapon"},
 			{"id": 6, "value": 95},
+		]
+		},
+	{
+		"name": "Transponder Tracker",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 372,
+		"description": "Uses strange energy from the three Obelisks to triangulate all Transponder Nodes on the specified frequency.",
+		"image": "transponder_tracker.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId":74, "count":20},
+			{"itemId":146, "count":30},
+			{"itemId":165, "count":80},
+			{"itemId":166, "count":50},
+			{"itemId":78, "count":25},
+		],
+		"stats": [
+			{"id": 1, "value": "Tools"},
+		]
+		},
+	{
+		"name": "Transponder Node",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 373,
+		"description": "Can be attached to living Creatures to track their location.",
+		"image": "transponder_node.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId":74, "count":3},
+			{"itemId":146, "count":12},
+			{"itemId":165, "count":14},
+			{"itemId":166, "count":10},
+			{"itemId":78, "count":12},
+		],
+		"stats": [
+			{"id": 1, "value": "Ammunition"},
 		]
 		},
 ]
