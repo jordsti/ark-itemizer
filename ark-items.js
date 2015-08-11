@@ -4,7 +4,7 @@
 // Data coming from : http://ark.gamepedia.com/
 // and http://www.arkchives.com/
 // all items are in the array "ark_items"
-// Current items of Ark 184.0
+// Current items of Ark 195.0
 // each items contains these attributes
 //		name : Item Name
 //		maxStack : Maximum item per stack
@@ -26,8 +26,8 @@
 //
 
 var ark_itemsVersion = {
-	itemizer: 0,
-	ark: {major: 189, minor: 0}
+	itemizer: 1,
+	ark: {major: 195, minor: 0}
 };
 
 var ark_itemStats = [
@@ -4674,6 +4674,151 @@ var ark_items = [
 		],
 		"stats": [
 			{"id": 1, "value": "Ammunition"},
+		]
+		},
+	{
+		"name": "Feeding Trough",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 375,
+		"description": "Put food for your nearby pets in this, and they'll automatically eat it when hungry!",
+		"image": "feeding_trough.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":7, "count":120},
+			{"itemId":73, "count":60},
+			{"itemId":76, "count":40},
+			{"itemId":9, "count":8},
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 2000},
+		]
+		},
+	{
+		"name": "Compund Bow",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 376,
+		"description": "A high-tech bow made of durable alloy, can launch arrows at high velocity. Requires arrows to fire.",
+		"image": "compound_bow.png",
+		"weight": 12.0,
+		"recipe": [
+			{"itemId":166, "count":95},
+			{"itemId":74, "count":85},
+			{"itemId":146, "count":75},
+		],
+		"stats": [
+			{"id": 1, "value": "Weapon"},
+			{"id": 5, "value": 250},
+		]
+		},
+	{
+		"name": "Metal Arrow",
+		"maxStack": 50,
+		"decomposes": 120,
+		"itemId": 377,
+		"description": "",
+		"image": "metal_arrow.png",
+		"weight": 0.4,
+		"recipe": [
+			{"itemId":75, "count":3},
+			{"itemId":76, "count":3},
+			{"itemId":166, "count":1},
+			{"itemId":74, "count":3},
+			{"itemId":146, "count":1},
+		],
+		"stats": [
+			{"id": 1, "value": "Ammunition"},
+			{"id": 6, "value": 130},
+		]
+		},
+	{
+		"name": "Metal Sickle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 380,
+		"description": "A curved tool ideal for harvesting fiber from seed plants.",
+		"image": "metal_sickle.png",
+		"weight": 0.4,
+		"recipe": [
+			{"itemId":74, "count":18},
+			{"itemId":7, "count":4},
+			{"itemId":10, "count":16},
+		],
+		"stats": [
+			{"id": 1, "value": "Weapon"},
+			{"id": 6, "value": 50},
+		]
+		},
+	{
+		"name": "Behemoth Stone Dinosaur Gateway",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 381,
+		"description": "A massive brick-and-mortar gateway that can be used for penning up huge dinosaurs.",
+		"image": "no_image.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":8, "count":300},
+			{"itemId":75, "count":120},
+			{"itemId":7, "count":180},
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 20000},
+		]
+		},
+	{
+		"name": "Behemoth Reinforced Dinosaur Gate",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 382,
+		"description": "A large, reinforced wooden gate that can be used with a Behemoth Gateway to keep dinosaurs in or out.",
+		"image": "behemoth_reinforced_dinosaur_gate.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":8, "count":250},
+			{"itemId":75, "count":100},
+			{"itemId":7, "count":150},
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+			{"id": 5, "value": 12500},
+		]
+		},
+	{
+		"name": "Bear Trap",
+		"maxStack": 10,
+		"decomposes": 120,
+		"itemId": 383,
+		"description": "Immobilizes humans and small creatures.",
+		"image": "bear_trap.png",
+		"weight": 2.0,
+		"recipe": [
+			{"itemId":76, "count":5},
+			{"itemId":74, "count":3},
+			{"itemId":10, "count":6},
+		],
+		"stats": [
+			{"id": 1, "value": "Weapon"},
+		]
+		},
+	{
+		"name": "Large Bear Trap",
+		"maxStack": 10,
+		"decomposes": 120,
+		"itemId": 384,
+		"description": "Immobilizes large creatures only.",
+		"image": "large_bear_trap.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":76, "count":10},
+			{"itemId":74, "count":6},
+			{"itemId":10, "count":15},
+		],
+		"stats": [
+			{"id": 1, "value": "Weapon"},
 		]
 		},
 ]

@@ -67,6 +67,12 @@ Items Database
  - [x] Eggs
  - [ ] Kibbles
  - [ ] New Dyes (itemId : 363 to 370)
+ - [ ] Canteen (Missing page on ARK Wiki)
+ - [ ] Metal Arrow : Description missing
+ - [ ] Behemoth Stone Dinosaur Gateway (No image)
+ - [ ] Image for missing item's image
+ - [ ] Metal Sickle, revision of the weight
+ 
 
 Features
 ===
