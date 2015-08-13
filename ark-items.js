@@ -4696,7 +4696,7 @@ var ark_items = [
 		]
 		},
 	{
-		"name": "Compund Bow",
+		"name": "Compound Bow",
 		"maxStack": 1,
 		"decomposes": 120,
 		"itemId": 376,
