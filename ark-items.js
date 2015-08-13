@@ -4734,6 +4734,25 @@ var ark_items = [
 		]
 		},
 	{
+		"name": "Canteen",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 378,
+		"description": "Safely carries a sizable amount of water, and is reasonably lightweight.",
+		"image": "canteen.png",
+		"weight": 0.4,
+		"recipe": [
+			{"itemId":166, "count":10},
+			{"itemId":146, "count":4},
+			{"itemId":10, "count":2},
+			{"itemId":74, "count":1},
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+			{"id": 11, "value": 300},
+		]
+		},
+	{
 		"name": "Metal Sickle",
 		"maxStack": 1,
 		"decomposes": 120,
