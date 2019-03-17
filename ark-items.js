@@ -4840,4 +4840,1296 @@ var ark_items = [
 			{"id": 1, "value": "Weapon"},
 		]
 		},
+		{
+		"name": "Refertilizer",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 386,
+		"description": "Spread these seeds of concentrated nutrients around and what was once harvested may yet regrow, even nearby a structure!",
+		"image": "refertilizer.png",
+		"weight": 0.3,
+		"recipe": [
+			{"itemId":250, "count":1},
+			{"itemId":251, "count":1},
+			{"itemId":108, "count":4},
+            {"itemId":50, "count":1},
+			{"itemId":162, "count":3},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Consumable"},
+		]
+		},
+		{
+		"name": "Scuba Tank",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 387,
+		"description": "A tank that's filled with Oxygen. Used to temporarily breathe underwater.",
+		"image": "scubatank.png",
+		"weight": 0.3,
+		"recipe": [
+			{"itemId":10, "count":40},
+			{"itemId":76, "count":4},
+			{"itemId":74, "count":14},
+            {"itemId":50, "count":1},
+			{"itemId":166, "count":3},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Armor"},
+		]
+		},
+		{
+		"name": "Scuba Mask",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 388,
+		"description": "Connects to a SCUBA tank, allowing the wearer to breathe underwater for as long as the tank has oxygen. Doesn't actually effect breathing underwater, only the tank does, instead provides clearer vision underwater.",
+		"image": "scubamask.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId":10, "count":15},
+			{"itemId":76, "count":6},
+			{"itemId":78, "count":10},
+            {"itemId":163, "count":3},
+		],
+		"stats": [
+			{"id": 1, "value": "Armor"},
+		]
+		},
+		{
+		"name": "Scuba Flippers",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 389,
+		"description": "These flippers are firm, but flexible. Wearing them increases swim speed, but decreases walking speed.",
+		"image": "scubaflippers.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId":10, "count":12},
+			{"itemId":76, "count":5},
+			{"itemId":163, "count":4},
+            {"itemId":216, "count":12},
+            {"itemId":146, "count":6},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Armor"},
+		]
+		},
+			{
+		"name": "Spray Painter",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 392,
+		"description": "Apply a dye to this, then shoot it at structures to paint them. Hold Alt Fire + Hotkey Number to set painting region.",
+		"image": "spraypainter.png",
+		"weight": 0.5,
+		"recipe": [
+			{"itemId":74, "count":50},
+			{"itemId":78, "count":49},
+			{"itemId":146, "count":60},
+            {"itemId":162, "count":20},
+            {"itemId":10, "count":5},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Tool"},
+		]
+		},
+		{
+		"name": "Doedicurus Saddle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 393,
+		"description": "Issa Saddle",
+		"image": "doedicurus_saddle.png",
+		"weight": 20,
+		"recipe": [
+			{"itemId":10, "count":200},
+			{"itemId":76, "count":110},
+			{"itemId":8, "count":15},
+            {"itemId":162, "count":20},
+            {"itemId":74, "count":5},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+		]
+		},
+		{
+		"name": "Sloped Thatch Roof",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 394,
+		"description": "An inclined thatched roof. Slightly different angle than the ramp.",
+		"image": "sloped_thatch_roof.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":75, "count":15},
+			{"itemId":7, "count":4},
+			{"itemId":76, "count":10},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Building"},
+		]
+		},
+		{
+		"name": "Sloped Thatch Wall Left",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 395,
+		"description": "A simple thatched sloped wall that insulates the inside from the outside, separates rooms, and provides structural integrity. Used in conjunction with a roof.",
+		"image": "sloped_thatch_wall_left.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":75, "count":10},
+			{"itemId":7, "count":2},
+			{"itemId":76, "count":7},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Building"},
+		]
+		},
+		{
+		"name": "Sloped Thatch Wall Right",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 396,
+		"description": "A simple thatched sloped wall that insulates the inside from the outside, separates rooms, and provides structural integrity. Used in conjunction with a roof.",
+		"image": "sloped_thatch_wall_right.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":75, "count":10},
+			{"itemId":7, "count":2},
+			{"itemId":76, "count":7},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Building"},
+		]
+		},
+		{
+		"name": "Sloped Wooden Roof",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 397,
+		"description": "An inclined wooden roof. Slightly different angle than the ramp.",
+		"image": "sloped_wooden_roof.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":7, "count":60},
+			{"itemId":75, "count":15},
+			{"itemId":76, "count":10},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Building"},
+		]
+		},
+		{
+		"name": "Sloped Wood Wall Left",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 398,
+		"description": "An inclined wooden roof. Slightly different angle than the ramp.",
+		"image": "sloped_wood_wall_left.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":7, "count":20},
+			{"itemId":75, "count":5},
+			{"itemId":76, "count":5},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Building"},
+		]
+		},
+		{
+		"name": "Sloped Wood Wall Right",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 399,
+		"description": "An inclined wooden roof. Slightly different angle than the ramp.",
+		"image": "sloped_wood_wall_right.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":7, "count":20},
+			{"itemId":75, "count":5},
+			{"itemId":76, "count":5},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Building"},
+		]
+		},
+		{
+		"name": "Sloped Stone Roof",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 400,
+		"description": "An inclined stone roof. Slightly different angle than the ramp.",
+		"image": "sloped_stone_roof.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":8, "count":60},
+			{"itemId":7, "count":30},
+			{"itemId":75, "count":20},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Building"},
+		]
+		},
+		{
+		"name": "Sloped Stone Wall Left",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 401,
+		"description": "A sturdy stone sloped wall that insulates the inside from the outside, separates rooms, and provides structural integrity. Used in conjunction with the roof.",
+		"image": "sloped_stone_wall_left.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":8, "count":20},
+			{"itemId":7, "count":10},
+			{"itemId":75, "count":10},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Building"},
+		]
+		},
+		{
+		"name": "Sloped Stone Wall Right",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 402,
+		"description": "A sturdy stone sloped wall that insulates the inside from the outside, separates rooms, and provides structural integrity. Used in conjunction with the roof.",
+		"image": "sloped_stone_wall_right.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":8, "count":20},
+			{"itemId":7, "count":10},
+			{"itemId":75, "count":10},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Building"},
+		]
+		},
+		{
+		"name": "Sloped Metal Roof",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 403,
+		"description": "An inclined metal roof. Slightly different angle than the ramp.",
+		"image": "sloped_metal_roof.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":74, "count":35},
+			{"itemId":146, "count":10},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Building"},
+		]
+		},
+		{
+		"name": "Sloped Metal Wall Left",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 404,
+		"description": "An inclined metal roof. Slightly different angle than the ramp.",
+		"image": "sloped_metal_wall_left.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":74, "count":15},
+			{"itemId":146, "count":5},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Building"},
+		]
+		},
+		{
+		"name": "Sloped Metal Wall Right",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 405,
+		"description": "An inclined metal roof. Slightly different angle than the ramp.",
+		"image": "sloped_metal_wall_right.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":74, "count":15},
+			{"itemId":146, "count":5},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Building"},
+		]
+		},
+		{
+		"name": "Magenta Coloring",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 406,
+		"description": "This substance can be used to color certain items and structures.",
+		"image": "magenta_coloring.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId":118, "count":9},
+			{"itemId":119, "count":9},
+			{"itemId":8, "count":2.5},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Dye"},
+		]
+		},
+		{
+		"name": "Brick Coloring",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 407,
+		"description": "This substance can be used to color certain items and structures.",
+		"image": "brick_coloring.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId":119, "count":12},
+			{"itemId":121, "count":6},
+			{"itemId":8, "count":2.5},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Dye"},
+		]
+		},
+		{
+		"name": "Cantaloupe Coloring",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 408,
+		"description": "This substance can be used to color certain items and structures.",
+		"image": "cantaloupe_coloring.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId":117, "count":4},
+			{"itemId":119, "count":7},
+			{"itemId":122, "count":7},
+			{"itemId":8, "count":2.5},
+		],
+		"stats": [
+			{"id": 1, "value": "Dye"},
+		]
+		},
+		{
+		"name": "Mud Coloring",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 409,
+		"description": "This substance can be used to color certain items and structures.",
+		"image": "mud_coloring.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId":117, "count":4},
+			{"itemId":118, "count":1},
+			{"itemId":119, "count":7},
+			{"itemId":121, "count":6},
+			{"itemId":8, "count":2.5},
+		],
+		"stats": [
+			{"id": 1, "value": "Dye"},
+		]
+		},
+		{
+		"name": "Navy Coloring",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 410,
+		"description": "This substance can be used to color certain items and structures.",
+		"image": "navy_coloring.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId":118, "count":12},
+			{"itemId":121, "count":6},
+			{"itemId":8, "count":2.5},
+		],
+		"stats": [
+			{"id": 1, "value": "Dye"},
+		]
+		},
+		{
+		"name": "Olive Coloring",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 411,
+		"description": "This substance can be used to color certain items and structures.",
+		"image": "navy_coloring.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId":117, "count":12},
+			{"itemId":121, "count":6},
+			{"itemId":8, "count":2.5},
+		],
+		"stats": [
+			{"id": 1, "value": "Dye"},
+		]
+		},
+		{
+		"name": "Slate Coloring",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 412,
+		"description": "This substance can be used to color certain items and structures.",
+		"image": "navy_coloring.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId":121, "count":6},
+			{"itemId":122, "count":6},
+			{"itemId":8, "count":2.5},
+		],
+		"stats": [
+			{"id": 1, "value": "Dye"},
+		]
+		},
+		{
+		"name": "Mind Wipe Tonic",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 413,
+		"description": "Drink this tonic to forget everything you have learned (resets your Engram Points).",
+		"image": "mindwipe_tonic.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId":253, "count":24},
+			{"itemId":120, "count":200},
+			{"itemId":123, "count":72},
+			{"itemId":124, "count":72},
+			{"itemId":151, "count":20},
+			{"itemId":150, "count":20},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Consumables"},
+		]
+		},
+		{
+		"name": "Wooden Raft",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 414,
+		"description": "A floating wooden platform that you can pilot across the water. Can support the weight of structures and be built on.",
+		"image": "wooden_raft.png",
+		"weight": 85.0,
+		"recipe": [
+			{"itemId":7, "count":250},
+			{"itemId":76, "count":125},
+			{"itemId":10, "count":75},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Structure"},
+		]
+		},
+		{
+		"name": "Bronto Platform Saddle",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 415,
+		"description": "Equip a Bronto with this to ride it. You can build structures on the large platform to make a mobile base.",
+		"image": "bronto_platform_saddle.png",
+		"weight": 20.0,
+		"recipe": [
+			{"itemId":10, "count":550},
+			{"itemId":76, "count":325},
+			{"itemId":74, "count":90},
+			{"itemId":163, "count":125},
+			{"itemId":146, "count":45},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+		]
+		},
+		{
+		"name": "Pachy Saddle",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 417,
+		"description": "Equip a Pachy with this to ride it.",
+		"image": "pachy_saddle.png",
+		"weight": 20.0,
+		"recipe": [
+			{"itemId":10, "count":110},
+			{"itemId":76, "count":65},
+			{"itemId":7, "count":20},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+		]
+		},
+		{
+		"name": "pachycephalosaurus Egg",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 418,
+		"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
+		"image": "pachycephalosaurus_egg.png",
+		"weight": 7.0,
+		"recipe": [
+			{"itemId":418, "count":1},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Egg"},
+		]
+		},
+		{
+		"name": "Painting Canvas",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 421,
+		"description": "A canvas sheet stretched over a wooden frame. Perfect for painting on.",
+		"image": "painting_canvas.png",
+		"weight": 7.0,
+		"recipe": [
+			{"itemId":76, "count":4},
+			{"itemId":7, "count":2},
+			{"itemId":10, "count":1},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Painting"},
+		]
+		},
+		{
+		"name": "Paracer Saddle",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 422,
+		"description": "Equip a Paracer with this to ride it.",
+		"image": "painting_canvas.png",
+		"weight": 20.0,
+		"recipe": [
+			{"itemId":10, "count":200},
+			{"itemId":76, "count":110},
+			{"itemId":74, "count":10},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+		]
+		},
+		{
+		"name": "Paracer Platform Saddle",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 423,
+		"description": "Equip a Paracer with this to ride it.",
+		"image": "painting_canvas.png",
+		"weight": 20.0,
+		"recipe": [
+			{"itemId":10, "count":320},
+			{"itemId":76, "count":200},
+			{"itemId":74, "count":70},
+			{"itemId":163, "count":45},
+			{"itemId":146, "count":25},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+		]
+		},
+        {
+		"name": "Pelt",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 424,
+		"description": "Equip a Paracer with this to ride it.",
+		"image": "pelt.png",
+		"weight": 0.5,
+		"recipe": [
+		],
+		"stats": [
+			{"id": 1, "value": "Resource"},
+		]
+		},
+		{
+		"name": "Dimorphodon Egg",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 425,
+		"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
+		"image": "dimorphodon_egg.png",
+		"weight": 5.0,
+		"recipe": [
+			{"itemId":425, "count":425},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Egg"},
+		]
+		},
+		{
+		"name": "Beelzebufo Saddle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 427,
+		"description": "Equip a Beelzebufo with this to ride it.",
+		"image": "beelzebufo_saddle.png",
+		"weight": 8.0,
+		"recipe": [
+			{"itemId":10, "count":170},
+			{"itemId":76, "count":95},
+			{"itemId":7, "count":30},
+			{"itemId":146, "count":5},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+		]
+		},
+		{
+		"name": "Megaloceros Saddle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 428,
+		"description": "Equip a Megaloceros with this to ride it.",
+		"image": "megaloceros_saddle.png",
+		"weight": 12.0,
+		"recipe": [
+			{"itemId":10, "count":200},
+			{"itemId":76, "count":110},
+			{"itemId":9, "count":5},
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+		]
+		},
+		{
+		"name": "Fur Leggings",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 429,
+		"description": "Provides significant physical protection. Also keeps your temperature up, so long as it stays dry.",
+		"image": "fur_leggings.png",
+		"weight": 12.0,
+		"recipe": [
+			{"itemId":424, "count":96},
+			{"itemId":74, "count":16},
+			{"itemId":10, "count":12},
+			{"itemId":76, "count":5},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Armor"},
+		]
+		},
+		{
+		"name": "Fur Chestpiece",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 430,
+		"description": "Provides significant physical protection. Also keeps your temperature up, so long as it stays dry.",
+		"image": "fur_chestpiece.png",
+		"weight": 12.0,
+		"recipe": [
+			{"itemId":424, "count":80},
+			{"itemId":74, "count":13},
+			{"itemId":10, "count":10},
+			{"itemId":76, "count":4},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Armor"},
+		]
+		},
+		{
+		"name": "Fur Cap",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 431,
+		"description": "Provides significant physical protection. Also keeps your temperature up, so long as it stays dry.",
+		"image": "fur_cap.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":424, "count":56},
+			{"itemId":74, "count":10},
+			{"itemId":10, "count":7},
+			{"itemId":76, "count":3},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Armor"},
+		]
+		},
+		{
+		"name": "Fur Boots",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 432,
+		"description": "Provides significant physical protection. Also keeps your temperature up, so long as it stays dry.",
+		"image": "fur_boots.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":424, "count":48},
+			{"itemId":74, "count":8},
+			{"itemId":10, "count":6},
+			{"itemId":76, "count":4},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Armor"},
+		]
+		},
+		{
+		"name": "Fur Gauntlets",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 433,
+		"description": "Provides significant physical protection. Also keeps your temperature up, so long as it stays dry.",
+		"image": "fur_boots.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":424, "count":40},
+			{"itemId":74, "count":6},
+			{"itemId":10, "count":5},
+			{"itemId":76, "count":2},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Armor"},
+		]
+		},
+		{
+		"name": "Wooden Club",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 434,
+		"description": "A easily made melee weapon that is excellent for knocking out targets. Only effective at short range.",
+		"image": "wooden_club.png",
+		"weight": 2.0,
+		"recipe": [
+			{"itemId":7, "count":4},
+			{"itemId":76, "count":15},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Melee"},
+		]
+		},
+		{
+		"name": "Poison Grenade",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 435,
+		"description": "Releases narcotic smoke to knock out anything in the area - only affects humans. Pulling the pin starts a 2.5 second timer to the gas release.",
+		"image": "poison_grenade.png",
+		"weight": 1.5,
+		"recipe": [
+			{"itemId":123, "count":10},
+			{"itemId":77, "count":14},
+			{"itemId":74, "count":5},
+			{"itemId":108, "count":18},
+			{"itemId":109, "count":12},
+			{"itemId":78, "count":5},
+            {"itemId":76, "count":20},
+			{"itemId":73, "count":5},
+		],
+		"stats": [
+			{"id": 1, "value": "Grenade"},
+		]
+		},
+		{
+		"name": "Fabricated Sniper Rifle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 436,
+		"description": "This semi-automatic rifle has less punch than a Longneck Rifle, but can be fired much more rapidly.",
+		"image": "fabricated_sniper_rifle.png",
+		"weight": 25.0,
+		"recipe": [
+			{"itemId":166, "count":115},
+			{"itemId":74, "count":80},
+			{"itemId":146, "count":110},
+		],
+		"stats": [
+			{"id": 1, "value": "Gun"},
+		]
+		},
+		{
+		"name": "Greenhouse Wall",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 438,
+		"description": "A metal-framed, glass wall that insulates the inside from the outside and separates rooms. Excellent for growing crops indoors.",
+		"image": "greenhouse_wall.png",
+		"weight": 25.0,
+		"recipe": [
+			{"itemId":74, "count":7},
+			{"itemId":78, "count":25},
+			{"itemId":146, "count":7},
+		],
+		"stats": [
+			{"id": 1, "value": "Building"},
+		]
+		},
+		{
+		"name": "Greenhouse Ceiling",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 439,
+		"description": "A metal-framed, glass ceiling that insulates the inside from the outside and separates rooms. Excellent for growing crops indoors.",
+		"image": "greenhouse_ceiling.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":74, "count":10},
+			{"itemId":78, "count":35},
+			{"itemId":146, "count":10},
+		],
+		"stats": [
+			{"id": 1, "value": "Building"},
+		]
+		},
+		{
+		"name": "Greenhouse DoorFrame",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 440,
+		"description": "A metal-framed, glass wall that insulates the inside from the outside and separates rooms. Excellent for growing crops indoors.",
+		"image": "greenhouse_doorframe.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":74, "count":5},
+			{"itemId":78, "count":20},
+			{"itemId":146, "count":5},
+		],
+		"stats": [
+			{"id": 1, "value": "Building"},
+		]
+		},
+		{
+		"name": "Greenhouse Door",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 441,
+		"description": "A metal-framed, glass door that insulates the inside from the outside and separates rooms. Excellent for growing crops indoors.",
+		"image": "greenhouse_door.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":74, "count":3},
+			{"itemId":78, "count":10},
+			{"itemId":146, "count":4},
+		],
+		"stats": [
+			{"id": 1, "value": "Building"},
+		]
+		},
+			{
+		"name": "Sloped Greenhouse wall Left",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 442,
+		"description": "A metal-frame, glass sloped wall that insulates the inside from the outside, separates rooms, and provides structural integrity. Used in conjunction with the roof. Excellent for growing crops indoors.",
+		"image": "sloped_greenhouse_wall_left.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":74, "count":4},
+			{"itemId":78, "count":15},
+			{"itemId":146, "count":4},
+		],
+		"stats": [
+			{"id": 1, "value": "Building"},
+		]
+		},
+		{
+		"name": "Sloped Greenhouse Wall Right",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 443,
+		"description": "A metal-frame, glass sloped wall that insulates the inside from the outside, separates rooms, and provides structural integrity. Used in conjunction with the roof. Excellent for growing crops indoors.",
+		"image": "sloped_greenhouse_wall_right.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":74, "count":4},
+			{"itemId":78, "count":15},
+			{"itemId":146, "count":4},
+		],
+		"stats": [
+			{"id": 1, "value": "Building"},
+		]
+		},
+		{
+		"name": "Sloped Greenhouse Roof",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 444,
+		"description": "An inclined metal-frame, glass roof. Slightly different angle than the ramp. Excellent for growing crops indoors.",
+		"image": "sloped_greenhouse_roof.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":74, "count":10},
+			{"itemId":78, "count":35},
+			{"itemId":146, "count":10},
+		],
+		"stats": [
+			{"id": 1, "value": "Building"},
+		]
+		},
+		{
+		"name": "Greenhouse Window",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 445,
+		"description": "Metal-framed, glass plates on hinges that cover windows to provide protection from projectiles and spying. Excellent for growing crops indoors.",
+		"image": "greenhouse_window.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":74, "count":1},
+			{"itemId":78, "count":3},
+			{"itemId":146, "count":1},
+		],
+		"stats": [
+			{"id": 1, "value": "Armor"},
+		]
+		},
+		{
+		"name": "Riot Leggings",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 446,
+		"description": "Provides heavy physical protection and reduced physical torpor, but provides almost no protection from the elements.",
+		"image": "riot_leggings.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":166, "count":70},
+			{"itemId":163, "count":40},
+			{"itemId":10, "count":12},
+			{"itemId":76, "count":5},
+		],
+		"stats": [
+			{"id": 1, "value": "Armor"},
+		]
+		},
+		{
+		"name": "Riot Chestpiece",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 447,
+		"description": "Provides heavy physical protection and reduced physical torpor, but provides almost no protection from the elements.",
+		"image": "riot_chestpiece.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":166, "count":70},
+			{"itemId":163, "count":40},
+			{"itemId":10, "count":10},
+			{"itemId":76, "count":4},
+		],
+		"stats": [
+			{"id": 1, "value": "Armor"},
+		]
+		},
+		{
+		"name": "Riot Gauntlets",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 448,
+		"description": "Provides heavy physical protection and reduced physical torpor, but provides almost no protection from the elements.",
+		"image": "riot_gauntlets.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":166, "count":25},
+			{"itemId":163, "count":15},
+			{"itemId":10, "count":5},
+			{"itemId":76, "count":2},
+		],
+		"stats": [
+			{"id": 1, "value": "Armor"},
+		]
+		},
+		{
+		"name": "Riot Boots",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 449,
+		"description": "Provides heavy physical protection and reduced physical torpor, but provides almost no protection from the elements.",
+		"image": "riot_boots.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":166, "count":30},
+			{"itemId":163, "count":15},
+			{"itemId":10, "count":6},
+			{"itemId":76, "count":4},
+		],
+		"stats": [
+			{"id": 1, "value": "Armor"},
+		]
+		},
+		{
+		"name": "Riot Helmet",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 450,
+		"description": "Provides heavy physical protection and reduced physical torpor, but provides almost no protection from the elements.",
+		"image": "riot_helmet.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":166, "count":50},
+			{"itemId":163, "count":25},
+			{"itemId":10, "count":7},
+			{"itemId":76, "count":3},
+			{"itemId":78, "count":35},
+		],
+		"stats": [
+			{"id": 1, "value": "Armor"},
+		]
+		},
+		{
+		"name": "Angler Gel",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 4501,
+		"description": "Powerful stunning weapon, but can only be used for a single strike before recharge is needed.",
+		"image": "angler_gel.png",
+		"weight": 0.01,
+		"recipe": [
+		],
+		"stats": [
+			{"id": 1, "value": "Armor"},
+		]
+		},
+		{
+		"name": "Electric Prod",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 451,
+		"description": "Powerful stunning weapon, but can only be used for a single strike before recharge is needed.",
+		"image": "electric_prod.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":166, "count":120},
+			{"itemId":74, "count":130},
+			{"itemId":165, "count":120},
+			{"itemId":146, "count":70},
+			{"itemId":78, "count":120},
+			{"itemId":4501, "count":15},
+		],
+		"stats": [
+			{"id": 1, "value": "Armor"},
+		]
+		},
+		{
+		"name": "Handcuffs",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 452,
+		"description": "Equip this onto an unconscious player, and they'll be restrained when they wake up!",
+		"image": "handcuffs.png",
+		"weight": 4.0,
+		"recipe": [
+			{"itemId":74, "count":50},
+			{"itemId":146, "count":10},
+			{"itemId":142, "count":5},
+		],
+		"stats": [
+			{"id": 1, "value": "Other"},
+		]
+		},
+		{
+		"name": "Broth of Enlightenment",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 453,
+		"description": "This sticky compound excels at absorbing other chemicals.",
+		"image": "broth_of_enlightenment.png",
+		"weight": 0.1,
+		"recipe": [
+			{"itemId":120, "count":10},
+			{"itemId":234, "count":2},
+			{"itemId":233, "count":2},
+			{"itemId":232, "count":2},
+			{"itemId":99, "count":2},
+			{"itemId":'Woolly Rhino Horn', "count":5},
+			{"itemId":'Black Pearl', "count":1},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Other"},
+		]
+		},
+		{
+		"name": "Absorbent Substrate",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": '454',
+		"description": "A single sip of this incredible broth will expand your mind and broaden your horizons, granting greatly increased experience gain for a brief time.",
+		"image": "absorbent_substrate.png",
+		"weight": 0.25,
+		"recipe": [
+			{"itemId":'Black Pearl', "count":8},
+			{"itemId":457, "count":8},
+			{"itemId":162, "count":8},
+		],
+		"stats": [
+			{"id": 1, "value": "Other"},
+		]
+		},
+		{
+		"name": "Woolly Rhino Horn",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 'Woolly Rhino Horn',
+		"description": "Used in very specialized Recipes.",
+		"image": "woolly_rhino_horn.png",
+		"weight": 8.0,
+		"recipe": [
+		],
+		"stats": [
+			{"id": 1, "value": "Other"},
+		]
+		},
+		{
+		"name": "Black Pearl",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 'Black Pearl',
+		"description": "A rare resource from the bottom of the sea...",
+		"image": "black_pearl.png",
+		"weight": 2.0,
+		"recipe": [
+		],
+		"stats": [
+			{"id": 1, "value": "Resource"},
+		]
+		},
+		{
+		"name": "Sap",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 457,
+		"description": "A thick blob of unrefined sap.",
+		"image": "sap.png",
+		"weight": 0.5,
+		"recipe": [
+		],
+		"stats": [
+			{"id": 1, "value": "Resource"},
+		]
+		},
+		{
+		"name": "Giant Bee Honey",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 'Giant Bee Honey',
+		"description": "A delicious and nutritious snack, useful for luring creatures to a trap or for fishing.",
+		"image": "giant_bee_honey.png",
+		"weight": 0.5,
+		"recipe": [
+		],
+		"stats": [
+			{"id": 1, "value": "Resource"},
+		]
+		},
+		{
+		"name": "Advanced Sniper Bullet",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 459,
+		"description": "A high-caliber modern bullet, primarily used with fabricated sniper rifles.",
+		"image": "advanced_sniper_bullet.png",
+		"weight": 0.2,
+		"recipe": [
+			{"itemId":74, "count":2},
+			{"itemId":109, "count":12},		
+			],
+		"stats": [
+			{"id": 1, "value": "Ammunition"},
+		]
+		},
+		{
+		"name": "Allosaurus Egg",
+		"maxStack": 100,
+		"decomposes": 120,
+		"itemId": 460,
+		"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
+		"image": "allosaurus_egg.png",
+	 	"weight": 12.0,
+	    "recipe": [
+		],
+		"stats": [
+			{"id": 1, "value": "Egg"},
+		]
+		},
+		{
+		"name": "Allosaurus Saddle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 461,
+		"description": "Equip an Allosaurus with this to ride it.",
+		"image": "allosaurus_saddle.png",
+	 	"weight": 12.0,
+	    "recipe": [
+			{"itemId":10, "count":320},
+			{"itemId":76, "count":170},
+			{"itemId":74, "count":30},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+		]
+		},
+		{
+		"name": "Araneo Saddle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": 462,
+		"description": "Equip an Araneo with this to ride it.",
+		"image": "araneo_saddle.png",
+	 	"weight": 12.0,
+	    "recipe": [
+			{"itemId":10, "count":260},
+			{"itemId":76, "count":140},
+			{"itemId":11, "count":100},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+		]
+		},
+		{
+		"name": "Arthropluera Saddle",
+		"maxStack": 1,
+		"decomposes": 120,
+		"itemId": '463',
+		"description": "Equip an Arthropluera with this to ride it.",
+		"image": "arthropluera_saddle.png",
+	 	"weight": 20.0,
+	    "recipe": [
+			{"itemId":10, "count":80},
+			{"itemId":76, "count":50},
+			{"itemId":7, "count":20},
+			{"itemId":74, "count":30},
+			{"itemId":73, "count":8},
+			{"itemId":146, "count":15},
+			{"itemId":142, "count":35},
+
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+		]
+		},
+		{
+		"name": "Achatina Paste",
+		"itemId": 'Achatina Paste',
+		"image": "achatina_paste.png",
+	    "recipe": [
+		],
+		"stats": [
+			{"id": 1, "value": "Saddle"},
+		]
+		},
 ]
